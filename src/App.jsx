@@ -1,0 +1,47 @@
+import { Route, Routes } from "react-router-dom";
+import HeroPage from "./Pages/HeroPage.jsx";
+import ProductPage from "./Pages/ProductPage.jsx";
+import CheckOutPage from "./Pages/CheckOutPage.jsx";
+import ProductDetailsPage from "./Pages/ProductDetailsPage.jsx";
+import { LoginPage, SignupPage } from "./Pages/Auth.jsx";
+import ReceiptPage from "./Pages/ReceiptPage.jsx";
+import Chat from "./Pages/Chat.jsx";
+
+const App = () => {
+  return (
+    <div>
+
+      <Routes>
+        <Route element={
+          <HeroPage />
+        } path="/home" />
+        <Route element={
+          <ProductPage />
+        } path="/" />
+        <Route element={
+          <CheckOutPage />
+        } path="/checkout" />
+        <Route element={
+          <ProductDetailsPage />
+        } path="/product/:id" />
+
+        <Route element={
+          <LoginPage />
+        } path="/login" />
+
+        <Route element={
+          <SignupPage />
+        } path="/signup" />
+
+        <Route element={
+          <ReceiptPage />
+        } path="/recipt" />
+      </Routes>
+      <div>
+        <Chat />
+      </div>
+    </div>
+  );
+};
+
+export default App;
