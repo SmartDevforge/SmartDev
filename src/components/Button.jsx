@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { Marker } from "./Marker.jsx";
 
 const Button = ({
@@ -34,20 +33,20 @@ const Button = ({
   );
   return href ? (
     <a
-      className={clsx(
-        // "relative p-0.5  rounded-2xl shadow-500 group",
-        // containerClassName,
-      )}
+      // className={
+      //   "relative p-0.5  rounded-2xl shadow-500 group",
+      //   containerClassName
+      // }
       href={href}
     >
       <Inner />
     </a>
   ) : (
     <button
-      className={clsx(
-        // "relative p-0.5  rounded-2xl shadow-500 group",
-        // containerClassName,
-      )}
+      // className={
+      //   "relative p-0.5  rounded-2xl shadow-500 group",
+      //   containerClassName
+      // }
       onClick={onClick}
     >
       <Inner />

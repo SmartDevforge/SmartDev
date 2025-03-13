@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <section>
       <div
-        name="Contact"
+        id="contact"
         className=" relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
       >
         <div className="container">

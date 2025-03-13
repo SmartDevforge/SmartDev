@@ -57,11 +57,11 @@ const Header = () => {
               <ul className="flex max-lg:block max-lg:px-12">
                 <li className="nav-li">
                   <NavLink className="base-bold text-p1 uppercase transition-colors duration-500 cursor-pointer hover:text-s2 max-lg:my-4 max-lg:h5"
-                    to="/home" > Home</NavLink>
+                    to="/home#Home" > Home</NavLink>
                   <NavLink className="base-bold text-p1 uppercase transition-colors duration-500 cursor-pointer hover:text-s2 max-lg:my-4 max-lg:h5"
-                    to="/home" > About</NavLink>
+                    to="#about" > About</NavLink>
                   <NavLink className="base-bold text-p1 uppercase transition-colors duration-500 cursor-pointer hover:text-s2 max-lg:my-4 max-lg:h5"
-                    to="/home" > Contact</NavLink>
+                    to="/home#contact" > Contact</NavLink>
 
                   <NavLink className="base-bold text-p1 uppercase transition-colors duration-500 cursor-pointer hover:text-s2 max-lg:my-4 max-lg:h5"
                     to="/" > product</NavLink>

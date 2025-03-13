@@ -265,3 +265,7 @@ input:-moz-autofill {
   /* Adds a 1px black border and removes the outline */
   outline: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
