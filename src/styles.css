@@ -1,0 +1,99 @@
+
+.SearchB{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+  .SearchIN{
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px;
+  }
+  .buyIcon{
+    font-size: 10px;
+  }
+  @media (max-width:530px) {
+    .finalS{
+      grid-template-columns: 1fr;
+    }
+    .fullWidthSm{
+      width: 100%;
+    }
+    .smHidden{
+      display: none;
+    }
+  }
+  
+  /* Works for Chrome, Edge, and Safari */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    /* Transitions the background color over 5000s */
+    transition: background-color 5000s;
+    /* Changes text color to black */
+    -webkit-text-fill-color: black !important;
+    /* Adds a 1px black border and removes the outline */
+    outline: none;
+  }
+  
+  /* Works for Firefox */
+  input:-moz-autofill {
+    /* Changes text color to black */
+    -moz-text-fill-color: black !important;
+    /* Adds a 1px black border and removes the outline */
+    outline: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  .BigCart{
+    display: block;
+  }
+  @media (max-width: 768px) {
+    .BigCart{
+      display: none;
+    }
+    .RespoCart{
+      display: flex;
+    }
+  }
+  
+  
+
+.heroimgCon{
+    background-color: red;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+}
+.hero1{
+    width: 785.8332384046633;
+height: 507.55309183527226;
+top: -224.76px;
+left: -39.56px;
+
+}
+.hero2{
+    width: 469.72957222407894;
+height: 705.125898240079;
+top: -10.29px;
+left: 192.24px;
+
+}
+.hero3{
+    width: 787.4142828606564;
+height: 508.5742949437537;
+top: 758.37px;
+left: -57.53px;
+
+}
+.tero{
+    font-family: Inter;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0%;
+color: white;
+}
+  

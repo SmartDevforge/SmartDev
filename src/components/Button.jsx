@@ -1,52 +1,38 @@
-import { Marker } from "./Marker.jsx";
+/* eslint-disable react/prop-types */
 
 const Button = ({
-  icon,
+  Icon,
   children,
   href,
   containerClassName,
   onClick,
-  markerFill,
 }) => {
   const Inner = () => (
     <>
-      <span className="relative flex items-center min-h-[60px] px-4 bg-p5 rounded-2xl inner-before group-hover:before:opacity-100 overflow-hidden">
-        <span className="absolute -left-[1px]">
-          <Marker markerFill={markerFill} />
-        </span>
-
-        {icon && (
-          <img
-            src={icon}
-            alt="circle"
-            className="size-10 mr-5 object-contain z-10"
-          />
-        )}
-
-        <span className="relative z-2 font-poppins base-bold text-s1 uppercase">
+      <span className="relative gap-1 flex items-center  inner-before  overflow-hidden">
+        <span className="relative z-2 font-poppins base-bold ">
           {children}
         </span>
+
+        {Icon && (
+          <Icon />
+        )}
       </span>
 
-      <span className="glow-before glow-after" />
     </>
   );
   return href ? (
     <a
-      // className={
-      //   "relative p-0.5  rounded-2xl shadow-500 group",
-      //   containerClassName
-      // }
+      className={
+        `relative    ${containerClassName}`}
       href={href}
     >
       <Inner />
     </a>
   ) : (
     <button
-      // className={
-      //   "relative p-0.5  rounded-2xl shadow-500 group",
-      //   containerClassName
-      // }
+      className={
+        `relative    ${containerClassName}`}
       onClick={onClick}
     >
       <Inner />

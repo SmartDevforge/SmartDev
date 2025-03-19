@@ -3,7 +3,21 @@ import { FormatCurrency, product } from '../constants'
 import { Link } from 'react-router-dom';
 import { SearchIcon } from '../constants/Icons';
 
-function Search() {
+// eslint-disable-next-line react/prop-types
+function Search({ page }) {
+    return (
+        page === "header" ?
+            <HeaderSearch /> :
+            page === "home" ?
+                <HeaderSearch /> :
+                page === "product" ?
+                    <ProductSearch /> :
+                    <HeaderSearch />
+    )
+}
+export default Search
+
+const ProductSearch = () => {
     const [query, setQuery] = useState("");
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
@@ -32,7 +46,6 @@ function Search() {
         setFilteredProducts([]);
         setShowPopup(false);
     };
-
     return (
         <div className=" flex relative w-full">
             <div className="container w-full flex justify-center align-center items-center ">
@@ -79,6 +92,14 @@ function Search() {
         </div>
     )
 }
-
-export default Search
-
+const HeaderSearch = () => {
+    return (
+            <div className="w-[100%]  flex justify-center align-center items-center ">
+                <input type="text"
+                    className="py-2 px-2 w-[100%]  placeholder:text-s2 placeholder:font-normal font-normal placeholder:text-sm bg-s1 text-s2 SearchIN outline-none border-none font-medium"
+                    placeholder="Search for products, categories or brands..."
+                />
+                <span className=' text-s2 bg-s1 py-2 px-5 SearchB'><SearchIcon /> </span>
+            </div>
+    )
+}

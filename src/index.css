@@ -18,7 +18,7 @@
 
 @layer base {
   html {
-    @apply bg-s1;
+    @apply bg-[white] ;
   }
 
   body {
@@ -155,6 +155,10 @@
   .container {
     @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
   }
+  .Herocontainer {
+    @apply ml-auto mr-0 max-w-[1252px] pr-16 max-xl:pr-10 max-lg:pr-6 max-sm:pr-4;
+}
+
   .caption {
     @apply small-2 mb-5 uppercase text-p3;
   }
@@ -219,53 +223,4 @@
   }
 
   /*  END of Footer*/
-}
-
-.SearchB{
-  border-top-right-radius: 14px !important;
-  border-bottom-right-radius: 14px;
-  cursor: pointer;
-}
-.SearchIN{
-  border-top-left-radius: 14px !important;
-  border-bottom-left-radius: 14px;
-}
-.buyIcon{
-  font-size: 10px;
-}
-@media (max-width:530px) {
-  .finalS{
-    grid-template-columns: 1fr;
-  }
-  .fullWidthSm{
-    width: 100%;
-  }
-  .smHidden{
-    display: none;
-  }
-}
-
-/* Works for Chrome, Edge, and Safari */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  /* Transitions the background color over 5000s */
-  transition: background-color 5000s;
-  /* Changes text color to black */
-  -webkit-text-fill-color: black !important;
-  /* Adds a 1px black border and removes the outline */
-  outline: none;
-}
-
-/* Works for Firefox */
-input:-moz-autofill {
-  /* Changes text color to black */
-  -moz-text-fill-color: black !important;
-  /* Adds a 1px black border and removes the outline */
-  outline: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }

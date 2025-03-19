@@ -22,6 +22,15 @@ import Howtobuy from "./how to buy.png"
 import jobseekers from "./jobseekers.png"
 import Person from "./Person.webp"
 import google from "./Google.webp"
+import hero1 from "./hero1.png"
+import hero2 from "./hero2.png"
+import hero3 from "./hero3.png"
+
+import heroproduct1 from "./heroproduct1.png"
+import heroproduct2 from "./heroproduct2.png"
+import heroproduct3 from "./heroproduct3.png"
+import heroproduct4 from "./heroproduct4.png"
+import heroproduct5 from "./heroproduct5.png"
 export{
     Agriculture,
     Electronics,
@@ -48,4 +57,13 @@ export{
     jobseekers,
     Person,
     google,
+    hero1,
+    hero2,
+    hero3,
+
+    heroproduct1,
+    heroproduct2,
+    heroproduct3,
+    heroproduct4,
+    heroproduct5
 }

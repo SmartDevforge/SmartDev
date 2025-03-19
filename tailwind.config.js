@@ -4,23 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-//         --text: #040c08;
-// --background: #f2faf5;
-// --primary: #008E3E;
-// --secondary: #F8C300;
-// --accent: #cca577;
-
-        p1: "#040c08", //--text
-        p2: "#3C52D9",
+        p1: "#012220", //--text
+        p2: "#779B9B",
         p3: "#C8EA80",
         p4: "#EAEDFF",
         // p5: "#C4CBF5",
-        p5: "#008E3E", // --primary
+        p5: "#068081", // --primary
         s1: "#f2faf5",  // --background
-        s2: "#F8C300", // --secondary:
-        s3: "#cca577", // --accent
+        s2: "#6B7280", // --secondary:
+        s3: "#4F63F9", // --accent
         s4: "#1959AD",
         s5: "#263466",
+        btn1: "",
         black: {
           DEFAULT: "#000000",
           100: "#05091D",
@@ -92,3 +87,4 @@ export default {
   },
   plugins: [],
 };
+

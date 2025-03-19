@@ -1,9 +1,8 @@
 import Footer from "../sections/Footer"
-import Header from "../sections/Header"
-import ProductBanner from "../sections/ProductBanner"
 import { useCategory } from "../constants/Context";
 import ProductCard from "../components/ProductCard";
 import { product } from "../constants";
+import Navbar from "../components/Navbar/Navbar";
 
 function ProductPage() {
     const { currentCategory } = useCategory();
@@ -22,9 +21,9 @@ function ProductPage() {
 
     return (
         <main className="overflow-hidden">
-            <Header />
-            <ProductBanner />
-            <div className="container mb-3">
+            <Navbar />
+            {/* <ProductBanner /> */}
+            <div className="container mb-3 mt-32">
                 <div className="grid grid-cols-2 finalS lg:grid-cols-4 xl:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
                     {
                         AllData.map((item) => {
@@ -39,6 +38,7 @@ function ProductPage() {
                                     totalPrice={item.totalPrice}
                                     description={item.desc}
                                     data={item}
+                                    qty={item.qty}
                                 />
                             )
                         })

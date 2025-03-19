@@ -1,10 +1,10 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 
 // Create Context
 const CategoryContext = createContext();
 
 // Create Provider Component
-// eslint-disable-next-line react/prop-types
 export const CategoryProvider = ({ children }) => {
   const [currentCategory, setCurrentCategory] = useState(null);
 
@@ -16,7 +16,7 @@ export const CategoryProvider = ({ children }) => {
 };
 
 const CartContext = createContext();
-// eslint-disable-next-line react/prop-types
+
 export const CartProvider = ({ children }) => {
   // Load cart from local storage or set an empty array
   const [cart, setCart] = useState(() => {
@@ -31,14 +31,31 @@ export const CartProvider = ({ children }) => {
   // Function to add items to cart
   const addToCart = (product) => {
     setCart((prevCart) => {
-      const updatedCart = [...prevCart, product];
-      return updatedCart;
+      const existingItem = prevCart.find((item) => item.id === product.id);
+
+      if (existingItem) {
+        // Increase quantity if item exists
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      } else {
+        // Add new item with quantity 1
+        return [...prevCart, { ...product, quantity: 1 }];
+      }
     });
   };
 
-  // Function to remove an item
+  // Function to remove an item (decrease quantity or remove if quantity is 1)
   const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    setCart((prevCart) => {
+      return prevCart
+        .map((item) =>
+          item.id === id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0); // Remove item if quantity reaches 0
+    });
   };
 
   // Function to clear cart
@@ -53,13 +70,30 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Custom Hook to use CartContext
-// eslint-disable-next-line react-refresh/only-export-components
+// Custom Hooks
 export const useCart = () => {
   return useContext(CartContext);
 };
-// Custom Hook to Use Context
-// eslint-disable-next-line react-refresh/only-export-components
+
 export const useCategory = () => {
   return useContext(CategoryContext);
+};
+
+// Create Context
+const SidebarContext = createContext();
+
+// Provider Component
+export const SidebarProvider = ({ children }) => {
+  const [selectedRoute, setSelectedRoute] = useState("/index"); // Default route
+
+  return (
+    <SidebarContext.Provider value={{ selectedRoute, setSelectedRoute }}>
+      {children}
+    </SidebarContext.Provider>
+  );
+};
+
+// Custom Hook to use SidebarContext
+export const useSidebar = () => {
+  return useContext(SidebarContext);
 };

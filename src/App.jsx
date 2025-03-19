@@ -6,6 +6,8 @@ import ProductDetailsPage from "./Pages/ProductDetailsPage.jsx";
 import { LoginPage, SignupPage } from "./Pages/Auth.jsx";
 import ReceiptPage from "./Pages/ReceiptPage.jsx";
 import Chat from "./Pages/Chat.jsx";
+import "./styles.css"
+import Profile from "./Pages/Profile.jsx";
 
 const App = () => {
   return (
@@ -24,6 +26,11 @@ const App = () => {
         <Route element={
           <ProductDetailsPage />
         } path="/product/:id" />
+
+
+        <Route element={
+          <Profile />
+        } path="/profile" />
 
         <Route element={
           <LoginPage />

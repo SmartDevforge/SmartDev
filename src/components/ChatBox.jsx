@@ -22,12 +22,12 @@ const ChatBox = () => {
     return (
         <div className="fixed bottom-5 right-5 z-50">
             {isOpen ? (
-                <div className="w-95 bg-black text-white rounded-xl shadow-lg overflow-hidden">
+                <div className="w-[90vw] h-[50vh] sm:w-[400px] sm:h-[50vh] lg:w-[500px] lg:h-[500px] py-5 bg-black text-white rounded-xl shadow-lg overflow-hidden">
                     <div className="flex items-center justify-between bg-gray-900 p-3 border-b border-gray-700">
                         <span className="font-semibold">Chat Support</span>
                         <X className="cursor-pointer" onClick={() => setIsOpen(false)} />
                     </div>
-                    <div className="h-64 p-3 overflow-y-auto">
+                    <div className="h-[calc(100%-100px)] p-3 overflow-y-auto">
                         {messages.map((msg, index) => (
                             <div
                                 key={index}

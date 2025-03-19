@@ -1,11 +1,11 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import {  FormatCurrency, Truncate } from "../constants";
+import { FormatCurrency } from "../constants";
 import { useCart } from "../constants/Context";
 import { CartIcon } from "../constants/Icons";
 
 // eslint-disable-next-line react/prop-types
-const ProductCard = ({ id, name, price, cover, description, data }) => {
+const ProductCard = ({ id, name, price, cover, description, data, qty }) => {
     const { addToCart } = useCart();
     const [showNotification, setShowNotification] = useState(false);
 
@@ -27,29 +27,34 @@ const ProductCard = ({ id, name, price, cover, description, data }) => {
                 <img src={cover} alt={name} className="w-full h-48 object-cover rounded-md" />
             </Link>
             <div>
-                <div className="flex items-center justify-between mt-3">
-                    <h3 className="text-sm font-semibold text-gray-800">{name}</h3>
-                    <button
-                        onClick={handleAddToCart}
-                        className="mt-3 flex items-center justify-center gap-2 w-[30px] bg-p5 text-white py-1 rounded-lg text-sm font-medium hover:bg-p3 transition"
-                    >
-                        <CartIcon className="size-3" />
-                    </button>
+                <div className="flex items-start flex-col justify-between mt-3">
+                    <h3 className="text-[14px] font-[400] font-semibold text-p1">{name}</h3>
+                    <span className="text-[#AEAEB2] text-[10px]">
+                        {qty}
+                    </span>
+
                 </div>
-
-                <p className="text-gray-600 text-sm">{Truncate(description)}</p>
-
                 <div className="flex items-center justify-between mt-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    <p className="text-lg capitalize font-bold text-s3">{FormatCurrency(price)}</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 cursor-pointer text-s3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                     </svg>
-                    <p className="text-lg font-bold text-black">{FormatCurrency(price)}</p>
+
                 </div>
+
+
+                <button
+                    onClick={handleAddToCart}
+                    className="mt-3 flex border border-p5 items-center justify-center gap-2 w-[100%] bg-white text-p5 py-1 rounded-lg text-sm font-medium hover:bg-p5 hover:text-white transition"
+                >
+                    <CartIcon className="size-3 text-s1" />
+                    <span>Add to cart</span>
+                </button>
             </div>
 
             {/* Custom Notification */}
             {showNotification && (
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-500 text-white text-sm px-3 py-1 rounded-md shadow-lg transition-all duration-300">
+                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-p5 text-white text-sm px-3 py-1 rounded-md shadow-lg transition-all duration-300">
                     ✅ Added to Cart!
                 </div>
             )}

@@ -1,10 +1,10 @@
+import Navbar from "../components/Navbar/Navbar"
 import { Checkout } from "../sections/Checkout"
-import Header from "../sections/Header"
 
 function CheckOutPage() {
     return (
         <div>
-            <Header />
+            <Navbar />
             <div className="container mt-22">
                 <Checkout />
             </div>

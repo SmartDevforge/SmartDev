@@ -1,10 +1,10 @@
+import Navbar from '../components/Navbar/Navbar'
 import ProductDetails from '../sections/ProductDetails'
-import Header from '../sections/Header'
 
 function ProductDetailsPage() {
     return (
         <div>
-            <Header />
+            <Navbar />
             <ProductDetails />
         </div>
     )

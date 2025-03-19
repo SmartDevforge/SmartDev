@@ -2,12 +2,12 @@ import { socials, WebsiteName } from "../constants/index.jsx";
 
 const Footer = () => {
   return (
-    <footer className="bg-p5">
-      <div className="container py-10 ">
+    <footer className="bg-p5 text-white">
+      <div className="container py-5 ">
         <div className="flex w-full max-md:flex-col">
      
         <div className="small-compact flex flex-1 flex-wrap items-center justify-center gap-5">
-            <p className="opacity-70">This website was built by <a href="http://">smartdevforge</a> </p>
+            <p >This website was built by <a className="opacity-70" href="http://">smartdevforge</a> </p>
           </div>
 
           <div className="small-compact flex flex-1 flex-wrap items-center justify-center gap-5">

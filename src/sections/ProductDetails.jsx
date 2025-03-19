@@ -1,6 +1,7 @@
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useCart } from "../constants/Context";
 import { FormatCurrency, product } from "../constants";
+import { CartIcon } from "../constants/Icons";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -8,11 +9,11 @@ const ProductDetails = () => {
     const selectedProduct = product.find((item) => item.id === Number(id));
 
     if (!selectedProduct) {
-        return <p className="text-center text-red-500">Product not found!</p>;
+        return <p className="text-center text-red-400">Product not found!</p>;
     }
 
     return (
-        <div className="container  mt-24 mx-auto p-6">
+        <div className="container  flex justify-center items-center h-[84dvh]   mt-24 mx-auto p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Product Image */}
                 <img
@@ -22,20 +23,20 @@ const ProductDetails = () => {
                 />
 
                 {/* Product Info */}
-                <div>
-                    <h1 className="text-3xl font-bold text-white-900">{selectedProduct.name}</h1>
-                    <p className="text-lg text-gray-700 mt-2">{selectedProduct.desc}</p>
-                    <p className="text-lg text-white font-bold mt-2">{FormatCurrency(selectedProduct.price)}</p>
-
-                 
-
+                <div className="flex flex-col justify-center">
+                    <h1 className="text-3xl  text-p1 font-[600]">{selectedProduct.name}</h1>
+                    <p className="text-[#AEAEB2] text-[15px]">{selectedProduct.qty}</p>
+                    <p className="text-[16px] text-p2  mt-2">{selectedProduct.desc}</p>
+                    <p className="text-lg text-s3 mt-2 font-bold">{FormatCurrency(selectedProduct.price)}</p>
                     {/* Add to Cart Button */}
                     <button
                         onClick={() => addToCart(selectedProduct)}
-                        className="mt-6 bg-p5 text-white py-2 px-6 rounded-lg text-lg font-semibold hover:bg-p3 hover:text-p1 transition"
-                    >
+                        className="mt-3 w-[200px] flex border border-white items-center justify-center gap-2 bg-p5 text-white py-1 rounded-lg text-sm font-medium hover:bg-p5 hover:text-white transition"
+                        >
+                        <CartIcon className="size-3 text-s1" />
                         Add to Cart
                     </button>
+
                 </div>
             </div>
         </div>

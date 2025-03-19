@@ -2,9 +2,10 @@ import { useLocation } from "react-router-dom"
 import About from "../sections/About"
 import Contact from "../sections/Contact"
 import Footer from "../sections/Footer"
-import Header from "../sections/Header"
 import Hero from "../sections/Hero"
 import { useEffect } from "react"
+import Navbar from "../components/Navbar/Navbar"
+import HeroPageProduct from "../sections/HeroPageProduct"
 
 function HeroPage() {
   const location = useLocation();
@@ -20,8 +21,9 @@ function HeroPage() {
 
   return (
     <main className="overflow-hidden">
-      <Header />
+      <Navbar />
       <Hero />
+      <HeroPageProduct />
       <About />
       <Contact />
       <Footer />
