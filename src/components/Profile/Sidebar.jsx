@@ -9,6 +9,8 @@ const Sidebar = () => {
     { name: "Address Info", path: "/address" },
     { name: "Orders", path: "/orders" },
   ];
+  console.log(selectedRoute);
+  
   return (
     <div className="w-64 h-screen p-4">
       <ul>
@@ -24,6 +26,9 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+      <div className="p-2 text-red-500 cursor-pointer items-center pl-[30px]">
+        Logout 
+      </div>
     </div>
   );
 };

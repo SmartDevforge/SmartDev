@@ -58,36 +58,7 @@
       display: flex;
     }
   }
-  
-  
 
-.heroimgCon{
-    background-color: red;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-}
-.hero1{
-    width: 785.8332384046633;
-height: 507.55309183527226;
-top: -224.76px;
-left: -39.56px;
-
-}
-.hero2{
-    width: 469.72957222407894;
-height: 705.125898240079;
-top: -10.29px;
-left: 192.24px;
-
-}
-.hero3{
-    width: 787.4142828606564;
-height: 508.5742949437537;
-top: 758.37px;
-left: -57.53px;
-
-}
 .tero{
     font-family: Inter;
 font-weight: 400;
@@ -96,4 +67,14 @@ line-height: 150%;
 letter-spacing: 0%;
 color: white;
 }
-  
+@media (max-width:530px) {
+  .finalS{
+    grid-template-columns: 1fr !important;
+  }
+  .fullWidthSm{
+    width: 100% !important;
+  }
+  .smHidden{
+    display: none !important;
+  }
+}

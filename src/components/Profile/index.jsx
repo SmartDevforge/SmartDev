@@ -1,12 +1,18 @@
 import { useSidebar } from "../../constants/Context";
-
+import Address from "./Address";
+import ChangePassword from "./ChangePassword";
+import EditAddress from "./EditAddress";
+import Orders from "./Orders";
+import ProfileHome from "./ProfileHome";
 const ProfileRoute = () => {
   const { selectedRoute } = useSidebar();
   return (
     <div className="p-6 flex-1">
-      {selectedRoute === "/index" && <h1>Dashboard Page</h1>}
-      {selectedRoute === "/address" && <h1>Address Info</h1>}
-      {selectedRoute === "/orders" && <h1>Orders</h1>}
+      {selectedRoute === "/index" && <ProfileHome />}
+      {selectedRoute === "/newpasscode" && <ChangePassword />}
+      {selectedRoute === "/address" && <Address />}
+      {selectedRoute === "/editaddress" && <EditAddress />}      
+      {selectedRoute === "/orders" && <Orders />}
     </div>
   );
 };

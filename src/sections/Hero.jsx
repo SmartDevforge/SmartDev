@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="  bg-p5 pt-60 max-md:h-fit h-[100dvh]">
       <div id="Home" className="">
         <div className="container relative flex justify-between items-center ">
-          <div className="relative z-2 max-md:w-full max-w-512 max-lg:max-w-388">
+          <div className="relative max-md:pb-6 z-2 max-md:w-full max-w-512 max-lg:max-w-388">
 
             <h1 className="text-white font-bold text-[45px] leading-[150%]">
               Discover Freshness, Flavor, and Tradition
@@ -26,7 +26,7 @@ const Hero = () => {
           </div>
           <div className="absolute right-[-20px]  top-[-150px] h-[70dvh]">
             <div className="relative w-full h-full flex flex-col items-end " >
-              <img className="w-[100%]" src={hero1} alt="hero" />
+              <img className="w-[100%] rotate-[10deg]" src={hero1} alt="hero" />
               <div className="relative top-[-200px] ">
               <img className="w-[90%] rotate-[-50deg] right-[-300px]" src={hero3} alt="hero" />
               <img className="w-[55%] absolute top-[-200px] right-0   rotate-[5deg] " src={hero2} alt="hero" />

@@ -62,20 +62,22 @@ const Navbar = () => {
           </span>
         </div>
         <div className="container relative max-w-7xl m-auto flex items-center justify-between">
-          <button
-            className={`respoWhite ${isScrolled ? " text-white drop-shadow-xl block md:hidden" : " text-p5 block md:hidden"
-              }`}
-            onClick={openMenu}
-          >
-            <HambuggerIcon />
-          </button>
+         
           <Header OpenCard={openCard} />
 
         </div>
 
 
         <div className="flex items-center justify-between pb-2 container m-auto">
-          <nav>
+
+        <button
+            className={`respoWhite ${isScrolled ? " text-white drop-shadow-xl block md:hidden" : " text-p5 block md:hidden"
+              }`}
+            onClick={openMenu}
+          >
+            <HambuggerIcon />
+          </button>
+          <nav className="max-md:hidden" >
             <ul className="flex items-center space-x-6">
               <li>
                 <NavLink

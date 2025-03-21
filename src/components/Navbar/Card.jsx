@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../../constants/Context";
 import { FormatCurrency } from "../../constants";
-import {  ArrowRight, X } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import { Basket } from "../../constants/Icons";
 
 // eslint-disable-next-line react/prop-types
@@ -126,7 +126,7 @@ const Card = ({ openCard }) => {
                 {/* sticky overflow-scroll */}
                 <div className="overflow-y-auto h-[50vh]">
                   {cart.length === 0 ? (
-                    <div className="flex justify-center items-center h-full flex-col gap-5">
+                    <div className="flex justify-center items-center h-full flex-col gap-10">
                       <div>
                         <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H19M6 6.5H8" stroke="#068081" strokeWidth="1.5" strokeLinecap="round" />
@@ -138,46 +138,74 @@ const Card = ({ openCard }) => {
                       <p className="text-p5 text-center ">Your cart is currently empty.</p>
                       <div
                         className=" flex bg-p1 justify-center items-center text-white cursor-pointer  w-[200px] p-2 rounded-xl"
-                        onClick={openCard}
+
                       >
-                        <X size={24} />
+                        <X onClick={openCard} size={24} />
                         close
                       </div>
-                    </div>) : (
-                    cart.map((item) => (
-                      <div
-                        key={item.id}
-                        className="flex justify-between items-center p-3 border-b gap-3"
-                      >
-                        <img
-                          src={item.cover}
-                          alt={item.name}
-                          className="w-16 h-16 rounded-lg object-cover"
-                        />
-                        <p className="flex-1 ml-4">{item.name}</p>
-                        <p className="text-green-600 font-bold">{FormatCurrency(item.price)}</p>
-                        <button onClick={(e) => { e.stopPropagation(); removeFromCart(item.id); }} className="bg-red-300 text-white px-1 py-1 rounded-md">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                          </svg>
-                        </button>
+                    </div>
+                  ) : (
+                    <div className="mt-[20px] h-full">
+                      <div className="flex w-full font-bold  text-xl px-4 py-1 items-center  justify-between">
+                        <div className="font-[600] capitalize">Cart Item</div>
+                        <div
+                          className=" cursor-pointer border-[1px] p-2 rounded-xl"
+                          onClick={openCard}
+                        >
+                          < X />
+                        </div>
                       </div>
-                    ))
+                      {
+                        cart.map((item) => (
+                          <div
+                            key={item.id}
+                            className="flex justify-between items-center p-3 border-b gap-3"
+                          >
+                            <img
+                              src={item.cover}
+                              alt={item.name}
+                              className="w-16 h-16 rounded-lg object-cover"
+                            />
+                            <p className="flex-1 ml-4">{item.name}</p>
+                            <p className="text-s3 font-bold">{FormatCurrency(item.price)}</p>
+                            <div className="flex gap-[20px]  border rounded-[10px] border-gray-300 py-2 px-3 items-center ">
+                              <button onClick={() => removeFromCart(item.id)}>-</button>
+                              <p> {item.quantity}</p>
+                              <button onClick={() => addToCart(item)}>+</button>
+                            </div>
+                            <button onClick={(e) => { e.stopPropagation(); removeFromCart(item.id); }} className=" text-white px-1 py-1 rounded-md">
+                              <Basket />
+                            </button>
+                          </div>
+                        ))
+                      }
+
+                      <div className="flex mt-10 justify-center">
+                        <div
+                          className=" flex bg-p1 justify-center items-center text-white cursor-pointer  w-[150px] p-2 rounded-[8px]"
+                        >
+                          <X onClick={clearCart} size={24} />
+                          Clear Cart
+                        </div>
+
+
+                      </div>
+                    </div>
                   )}
                 </div>
 
                 {cart.length > 0 && (
-                  <div className="fixed bottom-0   w-[95%]  p-4">
-                    <div className="flex justify-between font-semibold text-lg border-t pt-3">
+                  <div className="fixed flex justify-between items-end bottom-0   w-[90%]   p-4">
+                    <div className="flex justify-between flex-col font-semibold text-lg pt-3">
                       <span>Total:</span>
                       <span>{FormatCurrency(total)}</span>
                     </div>
-
                     <Link
                       to="/checkout"
-                      className="block w-full mt-3 bg-black text-white text-center py-3 rounded-lg hover:bg-opacity-90"
+                      className=" flex gap-4 justify-center w-[250px] mt-3 bg-p5 text-white text-center py-2 rounded-lg hover:bg-opacity-90"
                     >
                       Proceed to Checkout
+                      <ArrowRight />
                     </Link>
                   </div>
                 )}
