@@ -6,6 +6,8 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    firstname: "",
+    lastname:"",
     message: "",
   });
 
@@ -21,7 +23,8 @@ const Contact = () => {
     });
   };
   const formInitialDetails = {
-    name: "",
+    firstname: "",
+    lastname:"",
     email: "",
     message: "",
   };
@@ -30,7 +33,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      let response = await fetch("https://thompsonsolomonmailserver.onrender.com/contact", {
+      let response = await fetch("", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -57,31 +60,49 @@ const Contact = () => {
       >
         <div className="container">
           <div className="flex items-center justify-center  ">
-            <div className="relative border-2 p-3 rounded-14 border-s3 flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
+            <div className="relative   flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
             
-                <h2 className="w-full h3 text-p1 ">
-                  Contact
+                <h2 className="w-full capitalize h3 text-p1 ">
+                  Contact us
                 </h2>
+                <p className="text-p2 max-w-4xl">
+                Let’s chat how can we help you.
+                  </p>
+
               <div
                 className=" w-full  rounded-7xl "
               >
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
-                  className="mt-12 text-p1 flex flex-col gap-8"
+                  className="mt-12 text-p1 w-[100%]  flex flex-col gap-8"
                 >
                   {Error && <div style={{ color: "tomato" }}>{Error}</div>}
+                  <div className="flex  gap-8">
                   <label className="flex flex-col text-p1">
                     <span className="text-p1 font-medium mb-4">Your Name</span>
                     <input
                       type="text"
-                      name="name"
-                      value={form.name}
+                      name="firstname"
+                      value={form.firstname}
                       onChange={handleChange}
-                      placeholder="What's your good name?"
-                      className="bg-tertiary py-4 px-6 bg-white placeholder:text-secondary text-p1 rounded-lg outline-none border-none font-medium"
+                      placeholder="john"
+                      className="bg-tertiary w-full py-2 px-6 bg-white placeholder:text-secondary text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
                     />
                   </label>
+                  <label className="flex flex-col text-p1">
+                    <span className="text-p1 font-medium mb-4">Your email</span>
+                    <input
+                      type="text"
+                      name="lastname"
+                      value={form.lastname}
+                      onChange={handleChange}
+                      placeholder="doe"
+                      className="bg-tertiary w-full py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
+                    />
+                  </label>
+                  </div>
+
                   <label className="flex flex-col text-p1">
                     <span className="text-p1 font-medium mb-4">Your email</span>
                     <input
@@ -89,8 +110,8 @@ const Contact = () => {
                       name="email"
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="What's your web address?"
-                      className="bg-tertiary py-4 px-6 placeholder:text-secondary bg-white text-p1 rounded-lg outline-none border-none font-medium"
+                      placeholder="example@example.com"
+                      className="bg-tertiary py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
                     />
                   </label>
                   <label className="flex flex-col text-p1">
@@ -100,16 +121,16 @@ const Contact = () => {
                       name="message"
                       value={form.message}
                       onChange={handleChange}
-                      placeholder="What you want to say?"
-                      className="bg-tertiary py-4 px-6 placeholder:text-secondary bg-white  text-black rounded-lg outline-none border-none font-medium"
+                      placeholder="What is your message"
+                      className="bg-tertiary py-4 px-6 placeholder:text-secondary bg-white  text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
                     />
                   </label>
 
                   <button
                     type="submit"
-                    className="bg-p5 py-1.5 px-10 rounded-xl outline-none w-fit text-s1 font-bold shadow-md shadow-primary"
+                    className="bg-p2 w-full py-1.5 px-10 rounded-xl outline-none  text-s1  shadow-md shadow-primary"
                   >
-                    {loading ? "Sending..." : "Send"}
+                    {loading ? "Sending..." : "Send Message..."}
                   </button>
                 </form>
               </div>

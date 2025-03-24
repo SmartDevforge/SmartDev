@@ -82,7 +82,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to="/home#Home"
-                  className={`${location.hash === "#Home" ? isScrolled ? " text-s1" : "text-p5" : "text-gray-700"
+                  className={`${isScrolled ? " text-s1" : "text-p5" 
                     }`}
                 >
                   Home
@@ -94,7 +94,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to="/"
-                  className={`${location.pathname === "/" ? isScrolled ? "text-s1" : "text-p5" : "text-gray-700"
+                  className={`${isScrolled ? "text-s1" : "text-p5" 
                     }`}
                 >
                   Product
@@ -106,7 +106,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to="/home#about"
-                  className={`${location.hash === "#about" ? isScrolled ? "text-s1" : "text-p5" : "text-gray-700"
+                  className={`${ isScrolled ? "text-s1" : "text-p5"
                     }`}
                 >
                   About
@@ -118,7 +118,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to="/home#contact"
-                  className={`${location.hash === "#contact" ? isScrolled ? "text-s1" : "text-p5" : "text-gray-700"
+                  className={`${ isScrolled ? "text-s1" : "text-p5" 
                     }`}
                 >
                   Contact

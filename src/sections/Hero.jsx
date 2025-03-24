@@ -29,7 +29,7 @@ const Hero = () => {
               <img className="w-[100%] rotate-[10deg]" src={hero1} alt="hero" />
               <div className="relative top-[-200px] ">
               <img className="w-[90%] rotate-[-50deg] right-[-300px]" src={hero3} alt="hero" />
-              <img className="w-[55%] absolute top-[-200px] right-0   rotate-[5deg] " src={hero2} alt="hero" />
+              <img className="w-[55%] absolute top-[-200px] right-0   rotate-[0deg] " src={hero2} alt="hero" />
               </div>
             </div>
           </div>

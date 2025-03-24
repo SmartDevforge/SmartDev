@@ -13,7 +13,7 @@ function Header({ OpenCard }) {
             <div className="searchcon w-[100%]">
                 <Search page={"header"} />
             </div>
-            <div className="flex items-center justify-end w-[20%] gap-5 ">
+            <div className="flex items-center justify-end w-[20%] gap-5 max-md:gap-1 ">
                 <div className="relative inline-block cursor-pointer"
                     onClick={OpenCard}
                 >

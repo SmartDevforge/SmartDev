@@ -99,7 +99,7 @@ const HeaderSearch = () => {
                     className="py-2 px-2 w-[100%]  placeholder:text-s2 placeholder:font-normal font-normal placeholder:text-sm bg-s1 text-s2 SearchIN outline-none border-none font-medium"
                     placeholder="Search for products, categories or brands..."
                 />
-                <span className=' text-s2 bg-s1 py-2 px-5 SearchB'><SearchIcon /> </span>
+                <span className=' text-s2 bg-s1 py-2 px-5 max-md:px-3 SearchB'><SearchIcon /> </span>
             </div>
     )
 }

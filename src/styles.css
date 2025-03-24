@@ -31,7 +31,7 @@
     /* Transitions the background color over 5000s */
     transition: background-color 5000s;
     /* Changes text color to black */
-    -webkit-text-fill-color: black !important;
+    -webkit-text-fill-color: #779B9B !important;
     /* Adds a 1px black border and removes the outline */
     outline: none;
   }
@@ -39,7 +39,7 @@
   /* Works for Firefox */
   input:-moz-autofill {
     /* Changes text color to black */
-    -moz-text-fill-color: black !important;
+    -moz-text-fill-color: #779B9B !important;
     /* Adds a 1px black border and removes the outline */
     outline: none;
   }
@@ -78,3 +78,20 @@ color: white;
     display: none !important;
   }
 }
+
+.aboutus{
+    color: white !important; /* Main text color */
+    font-family: Inter, sans-serif;
+    font-weight: 700 !important;
+    font-size: 40px !important; /* Increase size for a stronger effect */
+    line-height: 130% !important;
+    letter-spacing: 5px !important; /* Slight spacing for better clarity */
+  padding: 5px;
+    /* Multiple text shadows for a better, smoother outline */
+    text-shadow:
+      -1px -1px 1px #068081, /* Top-left */
+       1px -1px 1px #068081, /* Top-right */
+      -1px  1px 1px #068081, /* Bottom-left */
+       1px  1px 1px #068081, /* Bottom-right */
+       0px  0px 6px #068081; /* Soft glow for a smooth look */
+  }

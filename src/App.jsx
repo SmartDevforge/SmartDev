@@ -3,8 +3,7 @@ import HeroPage from "./Pages/HeroPage.jsx";
 import ProductPage from "./Pages/ProductPage.jsx";
 import CheckOutPage from "./Pages/CheckOutPage.jsx";
 import ProductDetailsPage from "./Pages/ProductDetailsPage.jsx";
-import { LoginPage, SignupPage } from "./Pages/Auth.jsx";
-import ReceiptPage from "./Pages/ReceiptPage.jsx";
+import Auth from "./Pages/Auth.jsx";
 import Chat from "./Pages/Chat.jsx";
 import "./styles.css"
 import Profile from "./Pages/Profile.jsx";
@@ -26,23 +25,12 @@ const App = () => {
         <Route element={
           <ProductDetailsPage />
         } path="/product/:id" />
-
-
         <Route element={
           <Profile />
         } path="/profile" />
-
         <Route element={
-          <LoginPage />
-        } path="/login" />
-
-        <Route element={
-          <SignupPage />
-        } path="/signup" />
-
-        <Route element={
-          <ReceiptPage />
-        } path="/recipt" />
+          <Auth />
+        } path="/auth" />
       </Routes>
       <div>
         <Chat />
