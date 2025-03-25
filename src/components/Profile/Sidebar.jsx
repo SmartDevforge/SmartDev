@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useSidebar } from "../../constants/Context";
 
 const Sidebar = () => {
@@ -10,7 +11,7 @@ const Sidebar = () => {
     { name: "Orders", path: "/orders" },
   ];
   console.log(selectedRoute);
-  
+
   return (
     <div className="w-64 h-screen p-4">
       <ul>
@@ -18,18 +19,17 @@ const Sidebar = () => {
           <li
             key={item.path}
             onClick={() => setSelectedRoute(item.path)}
-            className={`p-2 cursor-pointer rounded ${
-              selectedRoute === item.path ? "text-p5" : "hover:underline"
-            }`}
+            className={`p-2 cursor-pointer rounded ${selectedRoute === item.path ? "text-p5" : "hover:underline"
+              }`}
           >
             {item.name}
           </li>
         ))}
       </ul>
       <div className="p-2 text-red-500 cursor-pointer items-center pl-[30px]">
-        <a href="/auth">
-        Logout 
-        </a>
+        <Link to="/auth">
+          Logout
+        </Link>
       </div>
     </div>
   );
