@@ -60,7 +60,7 @@ const Contact = () => {
       >
         <div className="container">
           <div className="flex items-center justify-center  ">
-            <div className="relative   flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
+            <div className="relative max-md:w-full">
             
                 <h2 className="w-full capitalize h3 text-p1 ">
                   Contact us
@@ -128,7 +128,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="bg-p2 w-full py-1.5 px-10 rounded-xl outline-none  text-s1  shadow-md shadow-primary"
+                    className="bg-p2 w-full py-1.5 px-10 rounded-[5px] outline-none  text-s1  shadow-md shadow-primary"
                   >
                     {loading ? "Sending..." : "Send Message..."}
                   </button>

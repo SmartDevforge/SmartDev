@@ -94,7 +94,7 @@ const ProductSearch = () => {
 }
 const HeaderSearch = () => {
     return (
-            <div className="w-[100%]  flex justify-center align-center items-center ">
+            <div className="w-[100%] max-md:hidden flex justify-center align-center items-center ">
                 <input type="text"
                     className="py-2 px-2 w-[100%]  placeholder:text-s2 placeholder:font-normal font-normal placeholder:text-sm bg-s1 text-s2 SearchIN outline-none border-none font-medium"
                     placeholder="Search for products, categories or brands..."

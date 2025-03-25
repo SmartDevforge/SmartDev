@@ -5,8 +5,6 @@ import Onboarding from "../components/Auth/Onboard";
 import Login from "../components/Auth/Login";
 import Signup from "../components/Auth/Signup";
 import ForgotPassword, { Confirmation, ResetPassword } from "../components/Auth/ForgotPassword";
-import NavigationDots from "../components/Auth/NavigateDots";
-// import NavigationDots from "./components/NavigationDots";
 
 const pages = [Onboarding, Login, Signup, ForgotPassword, ResetPassword, Confirmation];
 
@@ -36,10 +34,9 @@ export default function Auth() {
           transition={{ duration: 0.5 }}
           className="w-full h-full flex items-center justify-center"
         >
-          <PageComponent next={() => setStep(step + 1)} back={() => setStep(step - 1)} fpasscode={() => setStep(3)} />
+          <PageComponent next={() => setStep(step + 1)} back={() => setStep(step - 1)} fpasscode={() => setStep(3)} Login={() => setStep(1)} />
         </motion.div>
       </AnimatePresence>
-      {/* <NavigationDots  step={step} setStep={setStep} totalSteps={3} /> */}
     </div>
   );
 }

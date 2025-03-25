@@ -13,13 +13,13 @@ const ProductDetails = () => {
     }
 
     return (
-        <div className="container  flex justify-center items-center h-[84dvh]   mt-24 mx-auto p-6">
+        <div className="container  flex justify-center items-center h-[84dvh] max-md:mt-[150px]   mt-24 mx-auto p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Product Image */}
                 <img
                     src={selectedProduct.cover}
                     alt={selectedProduct.name}
-                    className="w-full h-96 object-cover rounded-lg shadow-md"
+                    className="w-full h-96 object-cover rounded-lg bg-red-300 max-md:mt-[15rem] shadow-md"
                 />
 
                 {/* Product Info */}

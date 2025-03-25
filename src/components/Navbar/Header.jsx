@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { SearchIcon } from "lucide-react";
 import { useCart } from "../../constants/Context";
 import { CartIcon, PersonIcon } from "../../constants/Icons"
 import Search from "../../sections/Search"
@@ -13,7 +14,10 @@ function Header({ OpenCard }) {
             <div className="searchcon w-[100%]">
                 <Search page={"header"} />
             </div>
-            <div className="flex items-center justify-end w-[20%] gap-5 max-md:gap-1 ">
+
+            <span className=' text-p5 hidden max-md:flex py-2 px-5 max-md:px-3 SearchB'><SearchIcon /> </span>
+
+            <div className="flex items-center justify-end w-[20%] gap-5  max-md:gap-1 ">
                 <div className="relative inline-block cursor-pointer"
                     onClick={OpenCard}
                 >

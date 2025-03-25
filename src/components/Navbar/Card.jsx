@@ -161,17 +161,21 @@ const Card = ({ openCard }) => {
                             key={item.id}
                             className="flex justify-between items-center p-3 border-b gap-3"
                           >
-                            <img
-                              src={item.cover}
-                              alt={item.name}
-                              className="w-16 h-16 rounded-lg object-cover"
-                            />
-                            <p className="flex-1 ml-4">{item.name}</p>
+                            <div className="flex flex-col items-start">
+                              <img
+                                src={item.cover}
+                                alt={item.name}
+                                className="w-16 h-16 rounded-lg object-cover"
+                              />
+                              <p className="flex-1">{item.name}</p>
+                            </div>
+                            <div className="flex flex-col gap-4">
                             <p className="text-s3 font-bold">{FormatCurrency(item.price)}</p>
                             <div className="flex gap-[20px]  border rounded-[10px] border-gray-300 py-2 px-3 items-center ">
                               <button onClick={() => removeFromCart(item.id)}>-</button>
                               <p> {item.quantity}</p>
                               <button onClick={() => addToCart(item)}>+</button>
+                            </div>
                             </div>
                             <button onClick={(e) => { e.stopPropagation(); removeFromCart(item.id); }} className=" text-white px-1 py-1 rounded-md">
                               <Basket />
@@ -202,11 +206,8 @@ const Card = ({ openCard }) => {
                     </div>
                     <Link
                       to="/checkout"
-                      className=" flex gap-4 justify-center w-[250px] mt-3 bg-p5 text-white text-center py-2 rounded-lg hover:bg-opacity-90"
-                    >
-                      Proceed to Checkout
-                      <ArrowRight />
-                    </Link>
+                      className=" flex gap-4 text-[14px] justify-center w-[150px] mt-3 bg-p5 text-white text-center py-2 px-1 rounded-lg hover:bg-opacity-90"
+                    >Proceed to Checkout</Link>
                   </div>
                 )}
 

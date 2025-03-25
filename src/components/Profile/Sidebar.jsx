@@ -27,7 +27,9 @@ const Sidebar = () => {
         ))}
       </ul>
       <div className="p-2 text-red-500 cursor-pointer items-center pl-[30px]">
+        <a href="/auth">
         Logout 
+        </a>
       </div>
     </div>
   );

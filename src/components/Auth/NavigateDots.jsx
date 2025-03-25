@@ -1,21 +1,3 @@
-// /* eslint-disable react/prop-types */
-// export default function NavigationDots({ step, setStep, totalSteps }) {
-//     return (
-//       <div className="absolute bottom-6 flex gap-2">
-//         {Array.from({ length: totalSteps }).map((_, index) => (
-//           <button
-//             key={index}
-//             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-//               step === index ? "bg-blue-500 w-4 h-4" : "bg-gray-400"
-//             }`}
-//             onClick={() => setStep(index)}
-//           />
-//         ))}
-//       </div>
-//     );
-//   }
-  
-
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 
