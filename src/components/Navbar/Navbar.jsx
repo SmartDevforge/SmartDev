@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import { NavLink, useLocation } from "react-router-dom";
 import { CallIcon, HambuggerIcon } from "../../constants/Icons";
-// import { useCart } from "../../constants/Context";
 import Header from "./Header";
 
 const Navbar = () => {

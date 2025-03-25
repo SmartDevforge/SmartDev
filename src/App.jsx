@@ -27,7 +27,7 @@ const App = () => {
         } path="/product/:id" />
         <Route element={
           <Profile />
-        } path="/profile" />
+        } path="/profiledashboard" />
         <Route element={
           <Auth />
         } path="/auth" />
