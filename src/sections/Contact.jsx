@@ -128,7 +128,8 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="bg-p2 w-full py-1.5 px-10 rounded-[5px] outline-none  text-s1  shadow-md shadow-primary"
+                    className="bg-p5 disabled:bg-p2 w-full py-1.5 px-10 rounded-[5px] outline-none  text-s1  shadow-md shadow-primary"
+                    disabled={loading || !form.email || !form.message || !form.firstname || !form.lastname}
                   >
                     {loading ? "Sending..." : "Send Message..."}
                   </button>

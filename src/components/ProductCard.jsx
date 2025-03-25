@@ -5,7 +5,7 @@ import { useCart } from "../constants/Context";
 import { CartIcon } from "../constants/Icons";
 
 // eslint-disable-next-line react/prop-types
-const ProductCard = ({ id, name, price, cover, description, data, qty }) => {
+const ProductCard = ({ id, name, price, cover, description, data, qty,instock }) => {
     const { addToCart } = useCart();
     const [showNotification, setShowNotification] = useState(false);
 
@@ -24,15 +24,17 @@ const ProductCard = ({ id, name, price, cover, description, data, qty }) => {
     return (
         <div className="bg-white rounded-lg width-full w-[250px] fullWidthSm shadow-md p-4 transition duration-300 hover:shadow-lg relative">
             <Link to={`/product/${id}`} className="block">
-                <img src={cover} alt={name} className="w-full h-48 object-cover rounded-md" />
+                <img src={cover} alt={name} className="w-full h-48 object-contain rounded-md" />
             </Link>
             <div>
                 <div className="flex items-start flex-col justify-between mt-3">
                     <h3 className="text-[14px] font-[400] font-semibold text-p1">{name}</h3>
-                    <span className="text-[#AEAEB2] text-[10px]">
-                        {qty}
-                    </span>
 
+                    <div className="flex items-center gap-2 mt-2">
+                    <p className="text-[#AEAEB2] text-[15px]">{qty} </p>
+                    <span className="w-[5px] h-[5px]  bg-[#AEAEB2] rounded-full ml-2"></span>
+                    <p className={`${instock?"text-green-600" : "text-red-500"} capitalize`}> {instock? "in stock" :"out of stock"}</p>
+                    </div>
                 </div>
                 <div className="flex items-center justify-between mt-4">
                     <p className="text-lg capitalize font-bold text-s3">{FormatCurrency(price)}</p>

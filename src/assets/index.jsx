@@ -1,11 +1,4 @@
 import Logo from "./logo.jpg"
-import Image1 from "./image1.jpg"
-import Image2 from "./image2.jpg"
-import Image3 from "./image3.jpg"
-import Electronics from "./electronics.png"
-import Fashion from "./fashion.png"
-import Mobile from "./mobile.png"
-import Agriculture from "./agriculture.png"
 import Product1 from "./images/image1.jpg"
 import Product2 from "./images/image2.jpg"
 import Product3 from "./images/image3.jpg"
@@ -18,8 +11,6 @@ import Product9 from "./images/image9.jpg"
 import Product10 from "./images/image10.jpg"
 import Product11 from "./images/image11.jpg"
 import Product12 from "./images/image12.jpg"
-import Howtobuy from "./how to buy.png"
-import jobseekers from "./jobseekers.png"
 import Person from "./Person.webp"
 import google from "./Google.webp"
 import hero1 from "./hero1.png"
@@ -37,16 +28,19 @@ import heroproduct4 from "./heroproduct4.png"
 import heroproduct5 from "./heroproduct5.png"
 
 import aboutusImg from "./aboutusImg.png"
+
+import img1 from "./1.png"
+import img2 from "./2.png"
+import img3 from "./3.png"
+import img4 from "./4.png"
+import img5 from "./5.png"
+import img6 from "./6.png"
+import img7 from "./7.png"
+import img8 from "./8.png"
 export{
-    Agriculture,
-    Electronics,
-    Fashion,
-    Image1,
-    Image2,
-    Image3,
-    Mobile,
+  
     Logo,
-    Howtobuy,
+
 
     Product1,
     Product2,
@@ -60,7 +54,6 @@ export{
     Product10,
     Product11,
     Product12,
-    jobseekers,
     Person,
     google,
     hero1,
@@ -77,5 +70,15 @@ export{
     auth2,
     auth3,
 
-    aboutusImg
+    aboutusImg,
+
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    
 }

@@ -18,7 +18,7 @@ const App = () => {
         } path="/home" />
         <Route element={
           <Profile />
-        } path="/profiledashboard" />
+        } path="/profile" />
         <Route element={
           <ProductPage />
         } path="/" />

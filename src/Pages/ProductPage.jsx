@@ -39,6 +39,7 @@ function ProductPage() {
                                     description={item.desc}
                                     data={item}
                                     qty={item.qty}
+                                    instock={item.instock}
                                 />
                             )
                         })

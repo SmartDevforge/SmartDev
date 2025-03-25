@@ -27,7 +27,7 @@ function Header({ OpenCard }) {
                         {cart.length > 0 ? cart.length : 0}
                     </span>
                 </div>
-                <Link to="/profiledashboard">
+                <Link to="/profile">
                     <div
                         className="flex cursor-pointer items-start "
                     >
