@@ -3,6 +3,7 @@ import { SearchIcon } from "lucide-react";
 import { useCart } from "../../constants/Context";
 import { CartIcon, PersonIcon } from "../../constants/Icons"
 import Search from "../../sections/Search"
+import { Link } from "react-router-dom";
 
 function Header({ OpenCard }) {
     const { cart } = useCart();
@@ -26,13 +27,13 @@ function Header({ OpenCard }) {
                         {cart.length > 0 ? cart.length : 0}
                     </span>
                 </div>
-                <a href="/profiledashboard">
+                <Link to="/profiledashboard">
                     <div
                         className="flex cursor-pointer items-start "
                     >
                         <PersonIcon />
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
     )
