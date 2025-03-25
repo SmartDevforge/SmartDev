@@ -17,6 +17,9 @@ const App = () => {
           <HeroPage />
         } path="/home" />
         <Route element={
+          <Profile />
+        } path="/profiledashboard" />
+        <Route element={
           <ProductPage />
         } path="/" />
         <Route element={
@@ -25,9 +28,7 @@ const App = () => {
         <Route element={
           <ProductDetailsPage />
         } path="/product/:id" />
-        <Route element={
-          <Profile />
-        } path="/profiledashboard" />
+
         <Route element={
           <Auth />
         } path="/auth" />
