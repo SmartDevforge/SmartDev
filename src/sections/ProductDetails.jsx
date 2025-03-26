@@ -19,7 +19,7 @@ const ProductDetails = () => {
                 <img
                     src={selectedProduct.cover}
                     alt={selectedProduct.name}
-                    className="w-full h-96 object-cover rounded-lg bg-red-300 max-md:mt-[15rem] shadow-md"
+                    className="w-full h-96 object-cover rounded-lg max-md:mt-[5rem] shadow-md"
                 />
 
                 {/* Product Info */}
