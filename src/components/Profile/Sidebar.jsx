@@ -13,17 +13,21 @@ const Sidebar = () => {
   console.log(selectedRoute);
 
   return (
-    <div className="w-64 h-screen p-4">
-      <ul>
+    <div className="w-64 max-md:flex max-md:w-full max-md:h-fit h-screen p-4">
+      <ul className="max-md:flex w-[100%]">
         {menuItems.map((item) => (
-          <li
-            key={item.path}
-            onClick={() => setSelectedRoute(item.path)}
-            className={`p-2 cursor-pointer rounded ${selectedRoute === item.path ? "text-p5" : "hover:underline"
-              }`}
-          >
-            {item.name}
-          </li>
+          <>
+            <li
+              key={item.path}
+              onClick={() => setSelectedRoute(item.path)}
+              className={`p-2 w-full max-md:p-0 cursor-pointer rounded ${selectedRoute === item.path ? "text-p5" : "hover:underline"
+                }`}
+            >
+              {item.name}
+         {/* <hr className="h-0.5 bg-p5 " /> */}
+            </li>
+         
+            </>
         ))}
       </ul>
       <div className="p-2 text-red-500 cursor-pointer items-center pl-[30px]">

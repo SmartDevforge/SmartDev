@@ -3,22 +3,25 @@ import { useCategory } from "../constants/Context";
 import ProductCard from "../components/ProductCard";
 import { product } from "../constants";
 import Navbar from "../components/Navbar/Navbar";
+import { useEffect, useState } from "react";
+import { fetchProducts } from "../constants/api";
 
 function ProductPage() {
     const { currentCategory } = useCategory();
     console.log(currentCategory);
 
+    const [products, setProducts] = useState([]);
 
+    useEffect(() => {
+        fetchProducts().then(setProducts).catch(console.error);
+    }, []);
+
+
+    
+
+    console.log(products)
     // eslint-disable-next-line no-undef
-    const AllData = product.filter(function (e) {
-        if (currentCategory === null) {
-            return e
-        }
-        else {
-            return e.category === currentCategory;
-        }
-    });
-
+    const AllData = product
     return (
         <main className="overflow-hidden">
             <Navbar />

@@ -48,8 +48,9 @@ const ChatBox = () => {
                             onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                         />
                         <button
-                            className="ml-2 bg-p5 p-2 rounded-lg"
+                            className="ml-2 bg-p5 disabled:bg-p2 p-2 rounded-lg"
                             onClick={sendMessage}
+                            disabled={input.trim() === ""}
                         >
                             <Send size={20} />
                         </button>
@@ -68,3 +69,5 @@ const ChatBox = () => {
 };
 
 export default ChatBox;
+
+

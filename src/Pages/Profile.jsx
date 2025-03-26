@@ -7,8 +7,8 @@ function Profile() {
   return (
     <div>
       <Navbar />
-      <div className="container mt-[150px] flex">
-        <div className="h-[100dvh] min-w-[150px] bg-white flex-3">
+      <div className="container mt-[150px] flex max-md:flex-col">
+        <div className="h-[100dvh] max-md:h-[50px] min-w-[150px]  flex-3">
           <Sidebar />
         </div>
         <div className="flex-4 w-full  h-[100dvh]">

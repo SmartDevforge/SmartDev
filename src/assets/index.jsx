@@ -37,6 +37,8 @@ import img5 from "./5.png"
 import img6 from "./6.png"
 import img7 from "./7.png"
 import img8 from "./8.png"
+
+import contact from "./contact.png"
 export{
   
     Logo,
@@ -80,5 +82,7 @@ export{
     img6,
     img7,
     img8,
+
+    contact
     
 }

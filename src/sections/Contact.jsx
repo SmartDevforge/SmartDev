@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import {  contact } from "../assets";
 const Contact = () => {
 
   const [Error, setError] = useState("");
@@ -7,7 +8,7 @@ const Contact = () => {
     name: "",
     email: "",
     firstname: "",
-    lastname:"",
+    lastname: "",
     message: "",
   });
 
@@ -24,7 +25,7 @@ const Contact = () => {
   };
   const formInitialDetails = {
     firstname: "",
-    lastname:"",
+    lastname: "",
     email: "",
     message: "",
   };
@@ -59,15 +60,23 @@ const Contact = () => {
         className=" relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
       >
         <div className="container">
-          <div className="flex items-center justify-center  ">
-            <div className="relative max-md:w-full">
-            
-                <h2 className="w-full capitalize h3 text-p1 ">
-                  Contact us
-                </h2>
-                <p className="text-p2 max-w-4xl">
+          <div className="flex w-full items-start justify-center gap-5 ">
+            <div className="max-md:hidden w-[100%] h-[100dvh] flex-4 relative">
+              <img src={contact} className="h-[100%] w-[100%] relative rounded-14" alt="" />
+              <div className="absolute top-[10rem]">
+                <p className="text-white text-center">We’ re here to help. Chat to our friendly team 24/7
+                  and get setup and ready to go in just 5 mins.</p>
+                <p className="text-[#012220]  text-[32px] text-right pr-5">With one Tap </p>
+              </div>
+            </div>
+            <div className="relative h-[80dvh]  max-md:w-full w-[100%] flex-8">
+
+              <h2 className="w-full capitalize h3 mb-2 text-p1 ">
+                Contact us
+              </h2>
+              <p className="text-p2 max-w-4xl">
                 Let’s chat how can we help you.
-                  </p>
+              </p>
 
               <div
                 className=" w-full  rounded-7xl "
@@ -75,54 +84,54 @@ const Contact = () => {
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
-                  className="mt-12 text-p1 w-[100%]  flex flex-col gap-8"
+                  className=" text-p1 w-[100%]  flex flex-col gap-8"
                 >
                   {Error && <div style={{ color: "tomato" }}>{Error}</div>}
-                  <div className="flex  gap-8">
-                  <label className="flex flex-col text-p1">
-                    <span className="text-p1 font-medium mb-4">Your Name</span>
-                    <input
-                      type="text"
-                      name="firstname"
-                      value={form.firstname}
-                      onChange={handleChange}
-                      placeholder="john"
-                      className="bg-tertiary w-full py-2 px-6 bg-white placeholder:text-secondary text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
-                    />
-                  </label>
-                  <label className="flex flex-col text-p1">
-                    <span className="text-p1 font-medium mb-4">Your email</span>
-                    <input
-                      type="text"
-                      name="lastname"
-                      value={form.lastname}
-                      onChange={handleChange}
-                      placeholder="doe"
-                      className="bg-tertiary w-full py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
-                    />
-                  </label>
+                  <div className="flex   gap-8">
+                    <label className="flex flex-col text-p1">
+                      <span className="text-p1 font-medium mb-2">First Name</span>
+                      <input
+                        type="text"
+                        name="firstname"
+                        value={form.firstname}
+                        onChange={handleChange}
+                        placeholder="john"
+                        className="bg-transparent w-full py-2 px-6 placeholder:text-secondary  rounded-lg outline-none border-[1px] border-p4 font-medium"
+                      />
+                    </label>
+                    <label className="flex flex-col text-p1">
+                      <span className="text-p1 font-medium mb-4">Last Name</span>
+                      <input
+                        type="text"
+                        name="lastname"
+                        value={form.lastname}
+                        onChange={handleChange}
+                        placeholder="doe"
+                        className="bg-transparent w-full py-2 px-6 placeholder:text-secondary  rounded-lg outline-none border-[1px] border-p4 font-medium"
+                      />
+                    </label>
                   </div>
 
                   <label className="flex flex-col text-p1">
-                    <span className="text-p1 font-medium mb-4">Your email</span>
+                    <span className="text-p1 font-medium mb-2">Your email</span>
                     <input
                       type="email"
                       name="email"
                       value={form.email}
                       onChange={handleChange}
                       placeholder="example@example.com"
-                      className="bg-tertiary py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
+                      className="bg-transparent py-2 px-6 placeholder:text-secondary rounded-lg outline-none border-[1px] border-p4 font-medium"
                     />
                   </label>
                   <label className="flex flex-col text-p1">
-                    <span className="text-p1 font-medium mb-4">Your Message</span>
+                    <span className="text-p1 font-medium mb-2">Your Message</span>
                     <textarea
                       rows={7}
                       name="message"
                       value={form.message}
                       onChange={handleChange}
                       placeholder="What is your message"
-                      className="bg-tertiary py-4 px-6 placeholder:text-secondary bg-white  text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
+                      className="bg-transparent py-4 px-6 placeholder:text-secondary bg-white  text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
                     />
                   </label>
 
