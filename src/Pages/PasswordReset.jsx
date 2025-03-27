@@ -13,40 +13,72 @@ export const ResetPassword = () => {
     const token = searchParams.get("token");
 
 
+// const handleSubmit = async (e) => {
+
+//     e.preventDefault();
+//     if (!token || !password || !confirmPassword) {
+//         setError("All fields are required.");
+//         return;
+//     }
+
+//     console.log("Token:", token, "Password:", password);
+
+//     if (password.trim() !== confirmPassword.trim()) {
+//         setError("Passwords do not match.");
+//         return;
+//     }
+
+//     setError(""); // Clear previous errors
+
+//     try {
+//         await resetPassword(token, password);
+//         console.log("Reset Password Response:");
+//         navigate("/");
+//     } catch (error) {
+//         console.error("Reset Password failed:", error);
+
+//         // Handle different error responses
+//         if (error.response) {
+//             setError(error.response.data?.message || "Failed to reset password. Please try again.");
+//         } else if (error.request) {
+//             setError("No response from server. Please check your internet connection.");
+//         } else {
+//             setError("An unexpected error occurred.");
+//         }
+//     }
+// };
+
+
+
 const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!token || !password || !confirmPassword) {
         setError("All fields are required.");
         return;
     }
-
-    console.log("Token:", token, "Password:", password);
 
     if (password.trim() !== confirmPassword.trim()) {
         setError("Passwords do not match.");
         return;
     }
 
-    setError(""); // Clear previous errors
+    setError(""); 
+    // setLoading(true);
 
     try {
+        console.log("Sending data:", { "resetToken": token, "newPassword": password });
 
-        console.log("Reset Password Response:");
-        navigate("/auth"); // Redirect to login page after success
+        await resetPassword(token, password); 
+
+        console.log("Password reset successful!");
+        navigate("/auth"); 
     } catch (error) {
-        console.error("Reset Password failed:", error);
-
-        // Handle different error responses
-        if (error.response) {
-            setError(error.response.data?.message || "Failed to reset password. Please try again.");
-        } else if (error.request) {
-            setError("No response from server. Please check your internet connection.");
-        } else {
-            setError("An unexpected error occurred.");
-        }
+        setError(error.message);
+    } finally {
+        // setLoading(false);
     }
 };
-
 
     return (
         <div className="h-screen w-full flex items-center justify-center bg-gray-100">

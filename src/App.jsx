@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import HeroPage from "./Pages/HeroPage.jsx";
 import ProductPage from "./Pages/ProductPage.jsx";
 import CheckOutPage from "./Pages/CheckOutPage.jsx";
@@ -8,8 +8,10 @@ import Chat from "./Pages/Chat.jsx";
 import "./styles.css"
 import Profile from "./Pages/Profile.jsx";
 import { ResetPassword } from "./Pages/PasswordReset.jsx";
+import ProtectedRoute from "./constants/ProtectedRoute.jsx";
 
 const App = () => {
+  const token = localStorage.getItem("token");
   return (
     <div>
 
@@ -17,26 +19,40 @@ const App = () => {
         <Route element={
           <HeroPage />
         } path="/home" />
+
         <Route element={
-          <Profile />
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
         } path="/profile" />
+
+
         <Route element={
           <ProductPage />
         } path="/" />
+
+
         <Route element={
-          <CheckOutPage />
+          <ProtectedRoute>
+            <CheckOutPage />
+          </ProtectedRoute>
         } path="/checkout" />
+
+
         <Route element={
           <ProductDetailsPage />
         } path="/product/:id" />
+
 
         <Route element={
           <ResetPassword />
         } path="/reset-password" />
 
-        <Route element={
-          <Auth />
-        } path="/auth" />
+
+        <Route
+          path="/auth"
+          element={token ? <Navigate to="/" replace /> : <Auth />}
+        />
       </Routes>
       <div>
         <Chat />

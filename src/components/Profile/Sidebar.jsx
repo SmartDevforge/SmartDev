@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useSidebar } from "../../constants/Context";
 
 const Sidebar = () => {
   const { selectedRoute, setSelectedRoute } = useSidebar();
+  const navigate = useNavigate()
 
   // Sidebar Menu Items
   const menuItems = [
@@ -12,6 +13,10 @@ const Sidebar = () => {
   ];
   console.log(selectedRoute);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/auth");
+  };
   return (
     <div className="w-64 max-md:flex max-md:w-full max-md:h-fit h-screen p-4">
       <ul className="max-md:flex w-[100%]">
@@ -24,16 +29,12 @@ const Sidebar = () => {
                 }`}
             >
               {item.name}
-         {/* <hr className="h-0.5 bg-p5 " /> */}
-            </li>
-         
+            </li>         
             </>
         ))}
       </ul>
-      <div className="p-2 text-red-500 cursor-pointer items-center pl-[30px]">
-        <Link to="/auth">
+      <div className="p-2 text-red-500 cursor-pointer items-center pl-[30px]" onClick={handleLogout}>
           Logout
-        </Link>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Search from "../../sections/Search"
 import { Link } from "react-router-dom";
 
 function Header({ OpenCard }) {
+    const token = localStorage.getItem("token");
     const { cart } = useCart();
     return (
         <div className="flex justify-between items-center  py-2  w-full">
@@ -27,13 +28,19 @@ function Header({ OpenCard }) {
                         {cart.length > 0 ? cart.length : 0}
                     </span>
                 </div>
-                <Link to="/profile">
-                    <div
-                        className="flex cursor-pointer items-start "
-                    >
-                        <PersonIcon />
-                    </div>
-                </Link>
+                {
+                    token ?
+                        <Link to="/profile">
+                            <div
+                                className="flex cursor-pointer items-start "
+                            >
+                                <PersonIcon />
+                            </div>
+                        </Link> :
+                        <Link to="/auth" className="bg-white text-p5 text-[14px] rounded-[20px] py-2 px-8 border-[2px] border-p5">
+                            Sign In
+                        </Link>
+                }
             </div>
         </div>
     )

@@ -18,7 +18,11 @@ export const apiRequest = async (endpoint, method = "GET", data = null, token = 
             url: endpoint,
             method,
             data,
-            headers: token ? { Authorization: `Bearer ${token}` } : {},
+            headers: {
+                "Content-Type": "application/json",
+                "x-api-key": API_Key, // Ensure API key is always included
+                ...(token ? { Authorization: `Bearer ${token}` } : {}), // Add auth token if available
+            },
         });
         return response.data;
     } catch (error) {
@@ -64,8 +68,9 @@ export const apiRequest = async (endpoint, method = "GET", data = null, token = 
 export const registerUser = (credentials) => apiRequest("/v1/auth/register", "POST", credentials);
 export const loginUser = (credentials) => apiRequest("/v1/auth/login", "POST", credentials);
 export const forgotPassword = (email) => apiRequest("/v1/auth/forgot-password", "POST", { email });
-export const resetPassword = (resetToken, newPassword) => apiRequest(`/v1/auth/reset-password`, "POST", { resetToken, newPassword });
-
+// export const resetPassword = (resetToken, newPassword) => apiRequest(`/v1/auth/reset-password`, "POST", { resetToken, newPassword });
+export const resetPassword = (resetToken, newPassword) =>
+    apiRequest("/v1/auth/reset-password", "POST", { resetToken, newPassword });
 // 🔹 Data Fetching (GET)
 export const fetchProducts = () => apiRequest("/products");
 export const fetchUsers = () => apiRequest("/users");
