@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Onboarding from "../components/Auth/Onboard";
 import Login from "../components/Auth/Login";
 import Signup from "../components/Auth/Signup";
-import ForgotPassword, { Confirmation, ResetPassword } from "../components/Auth/ForgotPassword";
+import ForgotPassword, { Confirmation } from "../components/Auth/ForgotPassword";
 
-const pages = [Onboarding, Login, Signup, ForgotPassword, ResetPassword, Confirmation];
+const pages = [Onboarding, Login, Signup, ForgotPassword, Confirmation];
 
 export default function Auth() {
   const [step, setStep] = useState(0);

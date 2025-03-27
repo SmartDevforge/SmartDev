@@ -98,3 +98,13 @@ export const Eye = () => {
     </svg>
   )
 }
+
+export default function LoadingDots() {
+  return (
+    <div className="flex justify-center items-center space-x-2">
+      <span className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:0ms]"></span>
+      <span className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:150ms]"></span>
+      <span className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:300ms]"></span>
+    </div>
+  );
+}

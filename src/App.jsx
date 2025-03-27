@@ -7,6 +7,7 @@ import Auth from "./Pages/Auth.jsx";
 import Chat from "./Pages/Chat.jsx";
 import "./styles.css"
 import Profile from "./Pages/Profile.jsx";
+import { ResetPassword } from "./Pages/PasswordReset.jsx";
 
 const App = () => {
   return (
@@ -28,6 +29,10 @@ const App = () => {
         <Route element={
           <ProductDetailsPage />
         } path="/product/:id" />
+
+        <Route element={
+          <ResetPassword />
+        } path="/reset-password" />
 
         <Route element={
           <Auth />

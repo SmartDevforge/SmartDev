@@ -1,16 +1,37 @@
 import { useState } from "react";
+import LoadingDots from "../../constants/Icons";
+import { forgotPassword } from "../../constants/api";
 
 /* eslint-disable react/prop-types */
 export default function ForgotPassword({ next, back }) {
   const [emailSent, setEmailSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    setLoading(true);
+    setError("");
     e.preventDefault();
-    setEmailSent(true);
+    try {
+      const response = await forgotPassword(email);
+      setLoading(false);
+      setEmailSent(true);
+      console.log(email);
+      console.log(response);
+      setEmailSent(true);
+    }
+    catch (error) {
+      console.error("Forgot Password failed", error);
+      setLoading(false);    setEmailSent(true);
+      console.log(email);  
+      setError(error.message);
+    }
   };
 
   return (
     <div className="h-screen w-full flex items-center justify-center bg-gray-100">
+      {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
       <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
         {!emailSent ? (
           <>
@@ -19,11 +40,19 @@ export default function ForgotPassword({ next, back }) {
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-700">Email</label>
-                <input type="email" placeholder="example@gmail.com" className="bg-tertiary w-full py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
+                <input type="email" placeholder="example@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} className="bg-tertiary w-full py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
                   required />
               </div>
-              <button type="submit" className="w-full bg-p2 text-white py-2 rounded-lg hover:bg-p5">
-                Send Reset Link
+              <button type="submit" className="w-full bg-p5 disabled:bg-p2 text-white py-2 rounded-lg hover:bg-p2"
+                disabled={loading || !email}>
+                {loading ? (
+                  <span className="flex items-center justify-center h-6">
+                    <LoadingDots />
+                  </span>
+                ) : (
+                  "Send Reset Link"
+                )}
+
               </button>
             </form>
             <p className="mt-4 w-full text-sm text-gray-600">
@@ -34,7 +63,7 @@ export default function ForgotPassword({ next, back }) {
           <>
             <h2 className="text-2xl font-bold mb-4">Check Your Email</h2>
             <p className="text-gray-600">We&lsquo;ve sent a password reset link to your email.</p>
-            <button onClick={next} className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
+            <button onClick={next} className="mt-4 w-full bg-p5 text-white py-2 rounded-lg hover:bg-p2">
               Continue
             </button>
           </>
@@ -45,61 +74,7 @@ export default function ForgotPassword({ next, back }) {
 }
 
 
-export const ResetPassword = ({ next, back }) => {
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-    } else {
-      setError("");
-      next();
-    }
-  };
-
-  return (
-    <div className="h-screen w-full flex items-center justify-center bg-gray-100">
-      <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">Reset Password</h2>
-        <p className="text-gray-600 mb-4">Enter your new password below.</p>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-gray-700">New Password</label>
-            <input
-              type="password"
-              placeholder="*******"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="bg-tertiary w-full py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Confirm Password</label>
-            <input
-              type="password"
-              placeholder="*******"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              className="bg-tertiary w-full py-2 px-6 placeholder:text-secondary bg-white text-p2 rounded-lg outline-none border-[1px] border-p4 font-medium"
-              required
-            />
-          </div>
-          {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-          <button type="submit" className="w-full bg-p2 text-white py-2 rounded-lg hover:bg-p5">
-            Reset Password
-          </button>
-        </form>
-        <p className="mt-4 text-sm text-gray-600">
-          <button onClick={back} className="text-p5">Back</button>
-        </p>
-      </div>
-    </div>
-  );
-}
 
 
 export const Confirmation = ({ Login }) => {

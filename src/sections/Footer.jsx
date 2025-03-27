@@ -1,4 +1,4 @@
-import { Facebook, Instagram, LinkedinIcon, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
 
         <div className="flex max-md:flex-col max-md:gap-[30px] justify-between w-full">
           <div className="flex flex-col max-w-[350px] items-start justify-start ">
-            <h3 className="text-xl font-bold text-white">About Teefy</h3>
+            <h3 className="text-xl font-bold text-white">About Teefey</h3>
             <p className="mt-4 text-[#779B9B] text-[15px]">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
             <div className="flex mt-4 gap-3">
               <a href="tel:+2341234567890" className="text-white">(219) 555-0114</a>
@@ -88,7 +88,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="container">
       <div className="w-[100%] mt-8 border-t border-[#779B9B] pt-6 text-center text-sm">
-        <p>Teefy &copy; 2025. All Rights Reserved</p>
+        <p>Teefey &copy; 2025. All Rights Reserved</p>
       </div>
       </div>
     </footer>
