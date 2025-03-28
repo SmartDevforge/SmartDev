@@ -68,18 +68,12 @@ export const apiRequest = async (endpoint, method = "GET", data = null, token = 
 export const registerUser = (credentials) => apiRequest("/v1/auth/register", "POST", credentials);
 export const loginUser = (credentials) => apiRequest("/v1/auth/login", "POST", credentials);
 export const forgotPassword = (email) => apiRequest("/v1/auth/forgot-password", "POST", { email });
-// export const resetPassword = (resetToken, newPassword) => apiRequest(`/v1/auth/reset-password`, "POST", { resetToken, newPassword });
-export const resetPassword = (resetToken, newPassword) =>
-    apiRequest("/v1/auth/reset-password", "POST", { resetToken, newPassword });
-// 🔹 Data Fetching (GET)
-export const fetchProducts = () => apiRequest("/products");
-export const fetchUsers = () => apiRequest("/users");
+export const resetPassword = (resetToken, newPassword) =>apiRequest("/v1/auth/reset-password", "POST", { resetToken, newPassword });
 
-// 🔹 Create Data (POST)
-export const createProduct = (productData, token) => apiRequest("/products", "POST", productData, token);
 
-// 🔹 Update Data (PUT)
-export const updateProduct = (productId, updatedData, token) => apiRequest(`/products/${productId}`, "PUT", updatedData, token);
 
-// 🔹 Delete Data (DELETE)
-export const deleteProduct = (productId, token) => apiRequest(`/products/${productId}`, "DELETE", null, token);
+
+
+
+
+

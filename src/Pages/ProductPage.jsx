@@ -3,23 +3,16 @@ import { useCategory } from "../constants/Context";
 import ProductCard from "../components/ProductCard";
 import { product } from "../constants";
 import Navbar from "../components/Navbar/Navbar";
-import { useEffect, useState } from "react";
-import { fetchProducts } from "../constants/api";
 
 function ProductPage() {
+    // eslint-disable-next-line no-unused-vars
     const { currentCategory } = useCategory();
-    console.log(currentCategory);
 
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetchProducts().then(setProducts).catch(console.error);
-    }, []);
-
-
-    
-
-    console.log(products)
+    // useEffect(() => {
+    //     fetchProducts().then(setProducts).catch(console.error);
+    // }, []);
     // eslint-disable-next-line no-undef
     const AllData = product
     return (

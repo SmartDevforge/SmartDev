@@ -8,7 +8,6 @@ import { Basket } from "../../constants/Icons";
 const Card = ({ openCard }) => {
 
   const { cart, removeFromCart, addToCart, clearCart } = useCart();
-
   // Calculate total price
   const total = cart.reduce((sum, item) => sum + item.price, 0);
   return (
@@ -68,7 +67,7 @@ const Card = ({ openCard }) => {
                                 className="w-16 h-16 rounded-lg object-cover"
                               />
                               <p className="flex-1 ml-4">{item.name}</p>
-                              <p className="text-s3 font-bold">{FormatCurrency(item.price)}</p>
+                              <p className="text-s3 font-bold">{FormatCurrency(item.totalPrice)}</p>
                               <div className="flex gap-[20px]  border rounded-[10px] border-gray-300 py-2 px-3 items-center ">
                                 <button onClick={() => removeFromCart(item.id)}>-</button>
                                 <p> {item.quantity}</p>

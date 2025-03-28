@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import { SearchIcon } from "lucide-react";
+import {  LogIn, SearchIcon } from "lucide-react";
 import { useCart } from "../../constants/Context";
-import { CartIcon, PersonIcon } from "../../constants/Icons"
+import { CartIcon, LoginIcon, PersonIcon } from "../../constants/Icons"
 import Search from "../../sections/Search"
 import { Link } from "react-router-dom";
 
@@ -37,9 +37,15 @@ function Header({ OpenCard }) {
                                 <PersonIcon />
                             </div>
                         </Link> :
-                        <Link to="/auth" className="bg-white text-p5 text-[14px] rounded-[20px] py-2 px-8 border-[2px] border-p5">
-                            Sign In
-                        </Link>
+                        <div>
+                            <Link to="/auth" className="bg-white text-p5 text-[14px] signInButton rounded-[20px] py-2 px-8 border-[2px] border-p5">
+                                Sign In
+                            </Link>
+
+                            <Link to="/profile" className="hidden IconSeen">
+                                <LoginIcon />
+                            </Link>
+                        </div>
                 }
             </div>
         </div>

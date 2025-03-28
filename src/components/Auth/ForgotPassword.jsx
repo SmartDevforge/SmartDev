@@ -3,7 +3,7 @@ import LoadingDots from "../../constants/Icons";
 import { forgotPassword } from "../../constants/api";
 
 /* eslint-disable react/prop-types */
-export default function ForgotPassword({ next, back }) {
+export default function ForgotPassword({ back }) {
   const [emailSent, setEmailSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -23,11 +23,24 @@ export default function ForgotPassword({ next, back }) {
     }
     catch (error) {
       console.error("Forgot Password failed", error);
-      setLoading(false);    setEmailSent(true);
-      console.log(email);  
+      setLoading(false); setEmailSent(true);
+      console.log(email);
       setError(error.message);
     }
   };
+
+  const openEmailApp = () => {
+    setLoading(true);
+    const emailUrl = "https://mail.google.com/";
+    // Try opening the default email client
+    window.location.href = "mailto:";
+    // Fallback to opening Gmail in a new tab (if the first attempt fails)
+    setTimeout(() => {
+      window.open(emailUrl, "_blank");
+    }, 500);
+    setLoading(false);
+  };
+
 
   return (
     <div className="h-screen w-full flex items-center justify-center bg-gray-100">
@@ -58,13 +71,23 @@ export default function ForgotPassword({ next, back }) {
             <p className="mt-4 w-full text-sm text-gray-600">
               <button onClick={back} className="text-p5">Back to Login</button>
             </p>
+
+            
+
           </>
         ) : (
           <>
-            <h2 className="text-2xl font-bold mb-4">Check Your Email</h2>
+          <h2 className="text-2xl font-bold mb-4">Check Your Email</h2>
             <p className="text-gray-600">We&lsquo;ve sent a password reset link to your email.</p>
-            <button onClick={next} className="mt-4 w-full bg-p5 text-white py-2 rounded-lg hover:bg-p2">
-              Continue
+            <button onClick={openEmailApp} className="mt-4 w-full bg-p5 text-white py-2 rounded-lg hover:bg-p2">
+
+              {loading ? (
+                <span className="flex items-center justify-center h-6">
+                  <LoadingDots />
+                </span>
+              ) : (
+                "Continue"
+              )}
             </button>
           </>
         )}

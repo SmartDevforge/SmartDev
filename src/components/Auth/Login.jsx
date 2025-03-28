@@ -19,10 +19,10 @@ export default function Login({ next, fpasscode }) {
     setError("");
     try {
       const response = await loginUser({ email, password });
-      console.log(response)
-      localStorage.setItem("token", response.data.accessToken);
+    localStorage.setItem("token", response.data.accessToken);
       setLoading(false)
-      navigate("/")
+      window.location.reload();
+      // navigate("/")
     } catch (error) {
       console.error("Login failed", error);
       setLoading(false)
@@ -32,12 +32,11 @@ export default function Login({ next, fpasscode }) {
 
   return (
     <div className="h-screen w-full flex items-center justify-center ">
-      <div className="   w-[100%] h-[95dvh]   max-w-[80%] flex bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="w-[100%] h-[95dvh] max-w-[80%] flex justify-center bg-white shadow-lg rounded-lg overflow-hidden">
         {/* Left Side - Login Form */}
-        <div className="  w-[100%] h-[95dvh]  max-md:hidden">
+        <div className="  w-[100%] flex  h-[95dvh]  max-md:hidden">
           <img src={auth3} alt="" />
         </div>
-
         {/* Right Side - Image */}
         <div className="  w-[100%] p-8 max-md:w-full flex justify-center items-start  flex-col">
           <h2 className="text-2xl font-bold mb-4">Login</h2>

@@ -58,7 +58,7 @@ export default function Signup({ next, back }) {
       <div className="w-[100%] h-[95dvh] max-w-[80%] flex bg-white shadow-lg rounded-lg overflow-hidden">
 
         {/* Left Side - Image */}
-        <div className="w-full bg-cover bg-center max-md:hidden">
+        <div className="w-full flex bg-cover bg-center max-md:hidden">
           <img src={auth2} alt="" />
         </div>
 
@@ -68,9 +68,8 @@ export default function Signup({ next, back }) {
           {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
 
           <form className="w-full" onSubmit={handleSubmit}>
-            <div className="flex justify-between items-center gap-4">
-
-              <div className="mb-2">
+            <div className="flex justify-between items-start  gap-4 max-md:flex-col ">
+              <div className="mb-2  w-full">
                 <label className="block text-gray-700">First Name</label>
                 <input
                   type="text"
@@ -83,7 +82,7 @@ export default function Signup({ next, back }) {
                 />
               </div>
 
-              <div className="mb-2">
+              <div className="mb-2 w-full">
                 <label className="block text-gray-700">Last Name</label>
                 <input
                   type="text"
@@ -113,7 +112,7 @@ export default function Signup({ next, back }) {
               <label className="block text-gray-700">Phone Number </label>
               <div className="flex justify-between bg-white-100 w-[100%] p-2 rounded border-[1px] border-[#E0E0E0]">
                 <span
-                  className="cursor-pointer w-[30px] mr-[1px] "
+                  className="cursor-pointer w-[40px]"
                 >
                   UK |
                 </span>
@@ -169,7 +168,13 @@ export default function Signup({ next, back }) {
             </div>
 
             <div className="flex gap-4 items-center mb-4">
-              <input type="checkbox" className="bg-transparent outline-none rounded-none" name="check" id="" />
+              <input
+                type="checkbox"
+                className="appearance-none bg-white border border-gray-300 rounded-md w-5 h-5 cursor-pointer checked:bg-p5 checked:border-p5"
+                name="check"
+              />
+
+
               <p className="text-[14px]">I agree to the <span className="text-p5">Terms of Use & General Privacy Policy</span> of TeeFey</p>
             </div>
             <button

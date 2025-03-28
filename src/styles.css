@@ -57,6 +57,17 @@
     .RespoCart{
       display: flex;
     }
+    .signInButton{
+      display: none;
+    }
+  }
+  @media (max-width:1190px) {
+    .signInButton{
+      display: none;
+    }
+    .IconSeen{
+      display: flex !important;
+    }
   }
 
 .tero{
@@ -78,6 +89,7 @@ color: white;
     display: none !important;
   }
 }
+
 
 .aboutus{
     color: white !important; /* Main text color */
