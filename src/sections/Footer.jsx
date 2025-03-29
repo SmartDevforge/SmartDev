@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -23,18 +24,18 @@ const Footer = () => {
               </h3>
               <ul className="mt-4">
                 <li className="py-2">
-                  <a href="">
+                 <Link to="">
                     Profile
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2">
-                  <a href="">
+                 <Link to="">
                     Order History
-                  </a>
+                  </Link>
                 </li>  <li className="py-2">
-                  <a href="">
+                 <Link to="">
                     Shopping Cart
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -42,18 +43,18 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-white">Support</h3>
               <ul className="mt-4">
                 <li className="py-2">
-                  <a href="">
+                 <Link to="">
                   Contact
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2">
-                  <a href="">
+                 <Link to="">
                   Terms & Condition
-                  </a>
+                  </Link>
                 </li>  <li className="py-2">
-                  <a href="">
+                 <Link to="">
                   Shopping Cart
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -62,22 +63,22 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-white ">Socials</h3>
               <ul className="mt-4">
                 <li className="py-2">
-                  <a href="" className="flex items-center">
+                 <Link to="" className="flex items-center">
                     <Facebook size={20} className="mr-2" />
                     Facebook
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2">
-                  <a href="" className="flex items-center">
+                 <Link to="" className="flex items-center">
                     <Instagram size={20} className="mr-2" />
                     Instagram
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2">
-                  <a href="" className="flex items-center">
+                 <Link to="" className="flex items-center">
                     <Twitter size={20} className="mr-2" />
                     Twitter
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

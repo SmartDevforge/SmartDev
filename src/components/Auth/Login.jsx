@@ -21,8 +21,7 @@ export default function Login({ next, fpasscode }) {
       const response = await loginUser({ email, password });
     localStorage.setItem("token", response.data.accessToken);
       setLoading(false)
-      window.location.reload();
-      // navigate("/")
+      navigate("/")
     } catch (error) {
       console.error("Login failed", error);
       setLoading(false)
