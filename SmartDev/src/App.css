@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+/* body{
+    background-image: url(./Components/img/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% 25%;
+} */
+
+
+body {
+  /* background-image: url(./Components/img/bg-tablet-pattern.svg); */
+  background-repeat: no-repeat;
+  background-size: 800px; /* responsive width, auto height */
+  background-position: right 10% top 200%;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  body {
+      background-size: 100vw auto;
+      background-position: center top -100%;
+  }
+}
+
+/* Optional: Adjust for very small screens */
+@media (max-width: 480px) {
+  body {
+      background-size: 120vw auto;
+      background-position: center top -100%;
+  }
+}
+
+#cta{
+    background-image: url(./Components/img/bg-simplify-section-desktop.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+@media (max-width:576px) {
+    body{
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+    #cta{
+        background-image: url(./Components/img/bg-simplify-section-mobile.svg);
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    /* background-color:; */
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+  
+  .hamburger-bottom {
+    transform: translateY(14px);
+  }
+  
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+  
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+  
+  .open .hamburger-middle {
+    display: none;
+  }
+  
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
+  
+/* Works for Chrome, Edge, and Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Transitions the background color over 5000s */
+  transition: background-color 5000s;
+  /* Changes text color to black */
+  -webkit-text-fill-color: #fff !important;
+  /* Adds a 1px black border and removes the outline */
+  outline: none;
+}
+
+/* Works for Firefox */
+input:-moz-autofill {
+  /* Changes text color to black */
+  -moz-text-fill-color: #fff !important;
+  /* Adds a 1px black border and removes the outline */
+  outline: none;
+}
