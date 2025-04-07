@@ -1,41 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
+/* body{
+    background-image: url(./Components/img/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% 25%;
+} */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+body {
+  /* background-image: url(./Components/img/bg-tablet-pattern.svg); */
+  background-repeat: no-repeat;
+  background-size: 800px; /* responsive width, auto height */
+  background-position: right 10% top 200%;
 }
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  body {
+      background-size: 100vw auto;
+      background-position: center top -100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Optional: Adjust for very small screens */
+@media (max-width: 480px) {
+  body {
+      background-size: 120vw auto;
+      background-position: center top -100%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+#cta{
+    background-image: url(./Components/img/bg-simplify-section-desktop.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+@media (max-width:576px) {
+    body{
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+    #cta{
+        background-image: url(./Components/img/bg-simplify-section-mobile.svg);
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-.SearchB{
-  border-top-left-radius: 14px !important;
-}
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    /* background-color:; */
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+  
+  .hamburger-bottom {
+    transform: translateY(14px);
+  }
+  
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+  
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+  
+  .open .hamburger-middle {
+    display: none;
+  }
+  
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
+  
 /* Works for Chrome, Edge, and Safari */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

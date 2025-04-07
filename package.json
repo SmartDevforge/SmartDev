@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "author": "akhshy.balakannan@gmail.com <https://github.com/akhshyganesh>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

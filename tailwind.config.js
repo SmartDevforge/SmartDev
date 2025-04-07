@@ -7,15 +7,26 @@ export default {
         p1: "#012220", //--text
         p2: "#779B9B",
         p3: "#C8EA80",
-        p4: "#EAEDFF",
+        // p4: "#EAEDFF",
         // p5: "#C4CBF5",
-        p5: "#068081", // --primary
+        p5: "#0A3D33", // --primary
         s1: "#f2faf5",  // --background
-        s2: "#6B7280", // --secondary:
+        p4: "#20948B", // --secondary:
         s3: "#4F63F9", // --accent
         s4: "#1959AD",
         s5: "#263466",
         btn1: "",
+
+          brightRed: 'hsl(12, 88%, 59%)',
+          brightRedLight: 'hsl(12, 88%, 69%)',
+          brightRedSupLight: 'hsl(12, 88%, 95%)',
+          darkBlue: 'hsl(228, 39%, 23%)',
+          darkGrayishBlue: 'hsl(227, 12%, 61%)',
+          veryDarkBlue: 'hsl(233, 12%, 13%)',
+          veryPaleRed: 'hsl(13, 100%, 96%)',
+          veryLightGray: 'hsl(0, 0%, 98%)',
+        
+
         black: {
           DEFAULT: "#000000",
           100: "#05091D",

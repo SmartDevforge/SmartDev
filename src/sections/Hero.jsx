@@ -1,40 +1,31 @@
-import { ArrowRight } from "lucide-react";
-import Button from "../components/Button.jsx";
+// import { ArrowRight } from "lucide-react";
+// import Button from "../components/Button.jsx";
 import { Link } from "react-router-dom";
-import { hero1, hero2, hero3 } from "../assets/index.jsx";
+import { heroImg } from "../Components/img";
+// import { hero1, hero2, hero3 } from "../assets/index.jsx";
 
 const Hero = () => {
   return (
-    <section className="  bg-p5 pt-60 max-md:h-fit h-[100dvh]">
-      <div id="Home" className="">
-        <div className="container relative flex justify-between items-center ">
-          <div className="relative max-md:pb-6 z-2 max-md:w-full max-w-512 max-lg:max-w-388">
-
-            <h1 className="text-white font-bold text-[45px] leading-[150%]">
-              Discover Freshness, Flavor, and Tradition
-              — All in One Place!
+    <section id="hero" className="flex justify-center items-center w-[100%] pt-5">
+    {/* <!-- Flex Container --> */}
+    <div className="flex w-[90%]  flex-col-reverse justify-between md:flex-row items-center space-y-0 md:space-y-0 container">
+        {/* <!-- Left Item --> */}
+        <div className="flex flex-col mb-32 space-y-12 md:1/2">
+            <h1 className="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
+                Bring everyone together to build better products
             </h1>
-            <p className="font-inter font-normal text-base leading-[150%] text-white">
-              Shop now and experience the taste of home, delivered fast and fresh!
+            <p className="max-w-sm text-sm text-darkGrayish-blue md:text-left">
+                Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
             </p>
-            <Link to="/" offset={-100} >
-              <Button containerClassName={"bg-[#012220] rounded-[8px] mt-4 py-2 px-8 text-white"} Icon={() =>
-                <ArrowRight className="text-white" />
-              }>Shop Now! </Button>
-
-            </Link>
-          </div>
-          <div className="absolute right-[-20px]  top-[-150px] h-[70dvh]">
-            <div className="relative w-full h-full flex flex-col items-end " >
-              <img className="w-[100%] rotate-[10deg]" src={hero1} alt="hero" />
-              <div className="relative top-[-200px] ">
-              <img className="w-[90%] rotate-[-50deg] right-[-300px]" src={hero3} alt="hero" />
-              <img className="w-[55%] absolute top-[-200px] right-0   rotate-[0deg] " src={hero2} alt="hero" />
-              </div>
+            <div className="flex justify-self md:justify-start">
+            <Link to="" className="hidden md:block p-3 px-6 pt-2 text-[white] bg-p5 rounded-full baseline hover:bg-p4">Get Started</Link>
             </div>
-          </div>
         </div>
-      </div>
+        {/* <!-- Image --> */}
+        <div className="md:w-[45%] max-md:w-[80%] max-md:mx-auto">
+            <img src={heroImg} alt="" />
+        </div>
+    </div>
     </section>
   );
 };
