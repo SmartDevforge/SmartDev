@@ -13,9 +13,10 @@ function Header() {
         {/* <!-- Flex Container --> */}
         <div className="flex items-center justify-between">
           {/* <!-- Logo --> */}
-          <div className="pt-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text cursor-pointer bg-gradient-to-r from-p5 to-p4 hover:from-p4 hover:to-p5 transform hover:scale-105 transition-all duration-300 ease-in-out">
             SmartDev Forge
-          </div>
+          </h1>
+
           {/* <!-- Menu Items --> */}
           <div className="hidden md:flex space-x-6">
             <Link to="" className="hover:text-brightRedLight">Product</Link>
@@ -25,7 +26,7 @@ function Header() {
             <Link to="" className="hover:text-brightRedLight">Community</Link>
           </div>
           {/* <!-- Button --> */}
-          <Link to="" className="hidden md:block p-3 px-6 pt-2 text-[white] bg-p5 rounded-full baseline hover:bg-p4">Get Started</Link>
+          {/* <Link to="" className="hidden md:block p-3 px-6 pt-2 text-[white] bg-p5 rounded-full baseline hover:bg-p4">Get Started</Link> */}
           {/* <!-- Hamburger Icon --> */}
           <button
             id="menu-btn"

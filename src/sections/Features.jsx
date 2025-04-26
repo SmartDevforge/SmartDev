@@ -1,6 +1,6 @@
-const Features = () =>{
-return(
-    <section id="features" className="flex justify-center items-center w-[100%]">
+const Features = () => {
+    return (
+        <section id="features" className="flex justify-center items-center w-[100%]">
             {/* <!-- Flex Container --> */}
             <div className="container w-[90%] flex flex-col px-4  space-y-12 md:space-y-0 md:flex-row">
                 {/* <!-- What's Different? --> */}
@@ -8,9 +8,11 @@ return(
                     <h2 className="max-w-md text-4xl font-bold text-center md:text-left">
                         What&apos;s different about SmartDev Forge?
                     </h2>
-                    <p className="max-w-sm text-center text-p2 md:text-left">
-                        Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
-                    </p>
+                    <p className=" text-center text-p2 md:text-left max-md:w-[100%] ">
+                    At SmartDevForge, we bring your ideas to life with clean, high-performing digital solutions. As a small team of 5 developers, we turn complex problems into simple, scalable results—quickly and efficiently, without the jargon. Our focus? Performance, reliability, and your satisfaction.
+                        
+                        
+                             </p>
                 </div>
                 {/* <!-- Numbers List --> */}
                 <div className="flex flex-col space-y-8 md:w-1/2">
@@ -23,16 +25,15 @@ return(
                                     01
                                 </div>
                                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                                    Track company-wide progress
-                                </h3>
+                                Web Development                                </h3>
                             </div>
                         </div>
                         <div>
                             <h3 className="hidden mx-2 text-lg mb-4 font-bold md:block">
-                                Track company-wide progress
+                            Web Development 
                             </h3>
                             <p className="text-p2">
-                                See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way down to the smallest of details. Never lose sight of the bigger picture again.
+                            From sleek marketing sites to robust web applications, we build fast, scalable, and user-friendly web solutions tailored to your needs.
                             </p>
                         </div>
                     </div>
@@ -44,17 +45,16 @@ return(
                                     02
                                 </div>
                                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                                    Advanced built-in reports
+                                Mobile App Development
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <h3 className="hidden mx-2 text-lg mb-4 font-bold md:block">
-                                Advanced built-in reports
+                            Mobile App Development
                             </h3>
                             <p className="text-p2">
-                                Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.
-                            </p>
+                            Reach your audience on the go with powerful mobile apps that combine performance with pixel-perfect design.                            </p>
                         </div>
                     </div>
                     <div className="flex flex-col space-y-3 md:space-y-0 md:spacex-6 md:flex-row">
@@ -65,22 +65,22 @@ return(
                                     03
                                 </div>
                                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                                    Everything you need in one place
+                                AI-Powered Solutions
                                 </h3>
                             </div>
                         </div>
                         <div>
                             <h3 className="hidden mx-2 text-lg mb-4 font-bold md:block">
-                                Everything you need in one place
+                            AI-Powered Solutions
                             </h3>
                             <p className="text-p2">
-                                Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.
-                            </p>
+                            We integrate intelligent automation and machine learning to create smart systems that help you work smarter, not harder.                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-)}
+    )
+}
 
 export default Features

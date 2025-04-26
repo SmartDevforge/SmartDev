@@ -12,13 +12,12 @@ const Hero = () => {
         {/* <!-- Left Item --> */}
         <div className="flex flex-col mb-32 space-y-12 md:1/2">
             <h1 className="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
-                Bring everyone together to build better products
+            Build Smarter. Deliver Faster. Grow Better.
             </h1>
             <p className="max-w-sm text-sm text-darkGrayish-blue md:text-left">
-                Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
-            </p>
+            Custom web, mobile, and AI solutions built to perform—crafted by a team that actually gets it.            </p>
             <div className="flex justify-self md:justify-start">
-            <Link to="" className="hidden md:block p-3 px-6 pt-2 text-[white] bg-p5 rounded-full baseline hover:bg-p4">Get Started</Link>
+            <Link to="" className="hidden md:block p-3 px-6 pt-2 text-[white] bg-p5 rounded-full baseline hover:bg-p4">Let&apos;s Talk</Link>
             </div>
         </div>
         {/* <!-- Image --> */}

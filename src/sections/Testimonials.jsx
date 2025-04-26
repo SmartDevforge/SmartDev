@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+/* eslint-disable react/no-unescaped-entities */
 import { Averter1, Averter2, Averter3 } from "../Components/img"
 
 function Testimonials() {
@@ -19,9 +19,7 @@ function Testimonials() {
           <img src={Averter1} className="w-16 -mt-14" alt="" />
           <h5 className="text-lg font-bold">Anisha Li</h5>
           <p className="text-sm text-darkGrayishBlue">
-            “SmartDev forge has supercharged our team’s workflow. The ability to
-            maintain visibility on larger milestones at all times keeps
-            everyone motivated.”
+            “SmartDevForge transformed our approach to development. Their team’s expertise and dedication streamlined our projects, delivering results faster and more efficiently than ever.”
           </p>
         </div>
 
@@ -32,9 +30,7 @@ function Testimonials() {
           <img src={Averter2}className="w-16 -mt-14" alt="" />
           <h5 className="text-lg font-bold">Ali Bravo</h5>
           <p className="text-sm text-darkGrayishBlue">
-            “We have been able to cancel so many other subscriptions since
-            using SmartDev. There is no more cross-channel confusion and
-            everyone is much more focused.”
+          "Working with SmartDevForge has been a game-changer. They turned complex challenges into simple solutions, keeping us on track and focused on what really matters." 
           </p>
         </div>
 
@@ -45,15 +41,13 @@ function Testimonials() {
           <img src={Averter3} className="w-16 -mt-14" alt="" />
           <h5 className="text-lg font-bold">Richard Watts</h5>
           <p className="text-sm text-darkGrayishBlue">
-            “SmartDev forge has supercharged our team’s workflow. The ability to
-            maintain visibility on larger milestones at all times keeps
-            everyone motivated.”
+          "SmartDevForge’s seamless collaboration and commitment to quality have helped us reach new heights. They’re not just developers—they’re true partners in our success.&quot;
           </p>
         </div>
       </div>
       {/* <!-- Button --> */}
       <div className="my-16">
-        <Link to="" className=" p-3 px-6 pt-2 text-[white] bg-p5 rounded-full baseline hover:bg-p4">Get Started</Link>
+        {/* <Link to="" className=" p-3 px-6 pt-2 text-[white] bg-p5 rounded-full baseline hover:bg-p4">Get Started</Link> */}
       </div>
     </div>
   </section>
