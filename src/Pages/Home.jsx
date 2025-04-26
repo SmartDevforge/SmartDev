@@ -11,7 +11,7 @@ function Home() {
             <Header />
             <Hero />
             <Features />
-            <Testimonials />
+            {/* <Testimonials /> */}
             <Cta />
             <Footer />
         </div>

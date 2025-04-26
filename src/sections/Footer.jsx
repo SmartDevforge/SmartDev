@@ -10,7 +10,8 @@ const Footer = () => {
         <div className="flex max-md:flex-col max-md:gap-[30px] justify-between text-left w-full">
           <div className="flex flex-col max-w-[450px] items-start justify-start ">
             <h3 className="text-xl font-bold text-white">About SmartDev</h3>
-            <p className="mt-4 text-[#779B9B] text-[15px]">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
+            <p className="mt-4 text-[#779B9B] text-[15px]">
+            At SmartDevForge, we’re not just here to write code—we’re here to bring your ideas to life with clean, thoughtful, and high-performing digital experiences.              </p>
             <div className="flex mt-4 gap-3">
               <a href="tel:+2348141342103" className="text-white">(234) 814-134-2103</a>
               <p className="text-[#779B9B]">or</p>
