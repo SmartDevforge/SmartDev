@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-p5 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">
               SmartDev<span className="text-p4">Forge</span>
@@ -15,21 +15,21 @@ export default function Footer() {
               We build, refactor, and scale web experiences that help businesses thrive in the digital world.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-p4 transition-colors">
+              <Link to="/" className="text-white hover:text-p4 transition-colors">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-p4 transition-colors">
+              </Link>
+              <Link to="/" className="text-white hover:text-p4 transition-colors">
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-p4 transition-colors">
+              </Link>
+              <Link to="/" className="text-white hover:text-p4 transition-colors">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-p4 transition-colors">
+              </Link>
+              <Link to="/" className="text-white hover:text-p4 transition-colors">
                 <Linkedin size={20} />
-              </a>
+              </Link>
             </div>
           </div>
-
+          <div className=" grid gap-8 grid-cols-2">
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -90,6 +90,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
           </div>
 
           <div>

@@ -9,6 +9,9 @@ import custormWeb from "./custormweb.png"
 import webMentanance from "./webmentanance.jpeg"
 import ui from "./uiuxdesign.png"
 import performanceAuditImg from "./PerformanceAudit.jpg"
+import Ceo from "./Ceo.jpg"
+import profile1 from "./avatar-richard.png"
+import profile2 from "./avatar-shanai.png"
 
 export {
     Logo,
@@ -21,6 +24,8 @@ export {
     ui,
     AboutImg,
     code,
-performanceAuditImg,
-
+    performanceAuditImg,
+    Ceo,
+    profile1,
+    profile2
 }

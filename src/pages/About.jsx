@@ -65,7 +65,7 @@ export default function About() {
                 exceed expectations and drive business growth.
               </p>
               <Button className="bg-p5 hover:bg-p4 text-white">
-                <Link to="/">Meet Our Team</Link>
+                <Link to="/team">Meet Our Team</Link>
               </Button>
             </div>
             <div className="relative">
@@ -137,9 +137,11 @@ export default function About() {
             <p className="text-p2 mb-8">
               Let's collaborate to bring your digital vision to life with expert design, development, and optimization.
             </p>
-            <Button size="lg" className="bg-p3 hover:bg-p3/80 text-p1">
-              <Link to="/contact">Start a Project</Link>
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-p3 hover:bg-p3/80 text-p1">
+                Start a Project
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

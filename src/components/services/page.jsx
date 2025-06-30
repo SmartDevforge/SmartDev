@@ -31,7 +31,7 @@ const services = [
     title: "Web Maintenance",
     description: "Keep your digital presence running smoothly with our comprehensive maintenance services.",
     features: ["Regular Updates & Patches", "Performance Monitoring", "Security Audits", "Bug Fixes", "24/7 Support"],
-    image: webMentanance ||  "/placeholder.svg?height=400&width=600",
+    image: webMentanance || "/placeholder.svg?height=400&width=600",
     testimonial: {
       content:
         "Since partnering with SmartDev Forge for maintenance, our site uptime has been 99.9% and issues are resolved within hours.",
@@ -50,7 +50,7 @@ const services = [
       "Technical Debt Reduction",
       "Documentation",
     ],
-    image: code ||  "/placeholder.svg?height=400&width=600",
+    image: code || "/placeholder.svg?height=400&width=600",
     testimonial: {
       content:
         "The refactoring work done by SmartDev Forge reduced our build time by 70% and made our codebase much easier to maintain.",
@@ -69,7 +69,7 @@ const services = [
       "SEO Improvements",
       "Detailed Reports & Recommendations",
     ],
-    image: performanceAuditImg ||  "/placeholder.svg?height=400&width=600",
+    image: performanceAuditImg || "/placeholder.svg?height=400&width=600",
     testimonial: {
       content:
         "After implementing SmartDev Forge's performance recommendations, our page load time decreased by 65% and conversions increased by 23%.",
@@ -120,9 +120,8 @@ export default function ServicesPage() {
               <div
                 key={service.id}
                 id={service.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="flex items-center mb-4">
@@ -143,9 +142,11 @@ export default function ServicesPage() {
                     </ul>
                   </div>
 
-                  <Button className="bg-p5 hover:bg-p4 text-white">
-                    <Link to="/contact">Request This Service</Link>
-                  </Button>
+                  <Link to="/contact">
+                    <Button className="bg-p5 hover:bg-p4 text-white">
+                      Request This Service
+                    </Button>
+                  </Link>
                 </div>
 
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
@@ -155,7 +156,7 @@ export default function ServicesPage() {
                         src={service.image || "/placeholder.svg"}
                         alt={service.title}
                         fill
-                        className="object-cover"
+                        className="object-cover w-full h-full"
                       />
                     </div>
 
@@ -180,9 +181,11 @@ export default function ServicesPage() {
             <p className="text-p2 mb-8">
               We can create tailored packages that combine our services to meet your specific needs and budget.
             </p>
-            <Button size="lg" className="bg-p3 hover:bg-p3/80 text-p1">
-              <Link to="/contact">Get in Touch</Link>
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-p3 hover:bg-p3/80 text-p1">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { BarChart, Code, Figma, Wrench } from "lucide-react"
-import { Features1, Features2, Features3 } from "../img"
+import { Features1, Features2, Features3, ui } from "../img"
 
 // Mock data for case studies
 export const caseStudies = [
@@ -112,7 +112,7 @@ export const projects = [
     id: 1,
     title: "E-commerce Platform Redesign",
     description: "Complete redesign and performance optimization for a major retail brand",
-    image: "/placeholder.svg?height=400&width=600",
+    image: Features1,
     tags: ["UI/UX", "React", "Next.js", "Performance"],
     category: "web-design",
     caseStudy: {
@@ -140,7 +140,7 @@ export const projects = [
     id: 2,
     title: "SaaS Dashboard Refactoring",
     description: "Code refactoring and performance optimization for a B2B SaaS platform",
-    image: "/placeholder.svg?height=400&width=600",
+    image: Features2,
     tags: ["Code Refactoring", "React", "Performance", "TypeScript"],
     category: "refactoring",
     caseStudy: {
@@ -168,7 +168,7 @@ export const projects = [
     id: 3,
     title: "Fintech Mobile App",
     description: "Custom web application for financial transactions and account management",
-    image: "/placeholder.svg?height=400&width=600",
+    image:Features3,
     tags: ["Custom Web App", "React Native", "Firebase", "Paystack"],
     category: "web-app",
     caseStudy: {
@@ -224,7 +224,7 @@ export const projects = [
     id: 5,
     title: "Real Estate Listing Platform",
     description: "Property listing and search platform with virtual tours",
-    image: "/placeholder.svg?height=400&width=600",
+    image: ui,
     tags: ["UI/UX", "Next.js", "Three.js", "MongoDB"],
     category: "web-design",
     caseStudy: {

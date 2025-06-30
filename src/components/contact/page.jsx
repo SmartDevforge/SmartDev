@@ -124,20 +124,20 @@ export default function ContactPage() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                    <div className="SelectPriceRange">
                       <label htmlFor="budget" className="block text-sm font-medium text-p1 dark:text-white mb-2">
                         Budget Range
                       </label>
                       <Select onValueChange={handleSelectChange} value={formData.budget}>
-                        <SelectTrigger className="border-p2/30 focus:border-p5 dark:border-p2/30 dark:focus:border-p3">
+                        <SelectTrigger className="border-p2/30  dark:border-p2/30 dark:focus:border-p3">
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="under-5k">Under $5,000</SelectItem>
-                          <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                          <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                          <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                          <SelectItem value="over-50k">Over $50,000</SelectItem>
+                        <SelectContent className="bg-p4 cursor-pointer">
+                          <SelectItem className="cursor-pointer hover:bg-p5" value="under-5k">Under $5,000</SelectItem>
+                          <SelectItem className="cursor-pointer hover:bg-p5" value="5k-10k">$5,000 - $10,000</SelectItem>
+                          <SelectItem className="cursor-pointer hover:bg-p5" value="10k-25k">$10,000 - $25,000</SelectItem>
+                          <SelectItem className="cursor-pointer hover:bg-p5" value="25k-50k">$25,000 - $50,000</SelectItem>
+                          <SelectItem className="cursor-pointer hover:bg-p5" value="over-50k">Over $50,000</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                         type="text"
                         value={formData.project}
                         onChange={handleInputChange}
-                        className="border-p2/30 focus:border-p5 dark:border-p2/30 dark:focus:border-p3"
+                        className="border-p2/30  dark:border-p2/30 dark:focus:border-p3"
                         placeholder="e.g., Web App, Redesign, Refactoring"
                       />
                     </div>

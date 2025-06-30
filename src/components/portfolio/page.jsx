@@ -4,7 +4,7 @@ import { Button } from "../ui/button"
 import { Card, CardContent } from "../ui/card"
 import { Link } from "react-router-dom"
 import { projects } from "../../lib/data"
-import { CaseStudies } from "../ui/case-studies"
+import CaseStudyModal from "../ui/CaseStudyModal"
 
 
 
@@ -19,9 +19,6 @@ export default function PortfolioPage() {
     setSelectedProject(project)
     setIsModalOpen(true)
   }
-
-  console.log(filteredProjects)
-
   return (
     <>
       {/* Hero Section */}
@@ -126,6 +123,10 @@ export default function PortfolioPage() {
 
       {/* Case Study Modal */}
       {/* <CaseStudies project={selectedProject} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
+      <CaseStudyModal project={selectedProject} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+
+      {/* CaseStudyModal */}
     </>
   )
 }

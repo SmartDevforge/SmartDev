@@ -167,3 +167,63 @@ html {
 select, input , textarea, button {
   outline: none !important;
 }
+
+/* * Works for Chrome, Edge, and Safari  */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    /* Transitions the background color over 5000s */
+    transition: background-color 5000s;
+    /* Changes text color to black */
+    -webkit-text-fill-color: #779B9B !important;
+    /* Adds a 1px black border and removes the outline */
+    outline: none;
+  }
+  
+  /* Works for Firefox */
+  input:-moz-autofill {
+    /* Changes text color to black */
+    -moz-text-fill-color: #779B9B !important;
+    /* Adds a 1px black border and removes the outline */
+    outline: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  a.active{
+    background-color: rgb(32 148 139 / 0.1);    
+    color: #20948B;
+    }
+
+/* 
+    Thanks for this update but i will like you to build the following pages too pls 
+    Team Page,
+    on the client page Dashboard,
+       i will like you to build 
+       all message route,
+       send message route 
+       or basically a message route 
+       then download reports route,
+       shedule meeting route,
+       then contact support which should be a pop uo i thing 
+
+
+on the admin dashboard page 
+    i will like you too build 
+    Notification page which should be a pop up modal too 
+    all message page 
+    add project page 
+    edit project page
+    add team member page
+    edit team member page
+    Message Page 
+    News Letter Page 
+    testimonial page as we have formally discused 
+    and the setting page pls 
+    
+    
+    All of this pages should be built without ommiiting one and must be bug and really responsive 
+
+    take note that we will be using mork data for the main time so do well to take good note of that pls  */

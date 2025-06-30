@@ -67,7 +67,7 @@ function Hero() {
               <img
                 src={heroImg || "placeholder.svg?height=600&width=600"}
                 alt="SmartDev Forge Hero"
-                className="rounded-lg shadow-2xl  w-full h-[80dvh]"
+                className="rounded-lg shadow-2xl  w-full h-[80dvh] max-md:h-[50dvh]"
               />
               <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-p3 to-p4 text-p1 p-4 rounded-lg shadow-lg float-animation">
                 <p className="font-bold">100+</p>

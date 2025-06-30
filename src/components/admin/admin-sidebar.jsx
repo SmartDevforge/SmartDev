@@ -27,13 +27,12 @@ const menuItems = [
 export default function AdminSidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false)
   const Location = useLocation()
- const pathname = Location.pathname
+  const pathname = Location.pathname
 
   return (
     <div
-      className={`fixed left-0 top-0 h-full bg-black/60 backdrop-blur-sm border-r border-p4/30 transition-all duration-300 z-40 ${
-        isCollapsed ? "w-16" : "w-64"
-      }`}
+      className={`fixed left-0 top-0 h-full bg-black/60 backdrop-blur-sm border-r border-p4/30 transition-all duration-300 z-40 ${isCollapsed ? "w-16" : "w-64"
+        }`}
     >
       <div className="p-4">
         {/* Logo */}
@@ -60,11 +59,10 @@ export default function AdminSidebar() {
             return (
               <Link key={item.to} to={item.to}>
                 <div
-                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 hover:bg-p4/20 group ${
-                    isActive ? "bg-p4/30 text-white" : "text-p2 hover:text-white"
-                  }`}
+                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 hover:bg-p4/20 group ${isActive ? "bg-p4/30 text-white" : "text-p2 hover:text-white"
+                    }`}
                 >
-                  <item.icon className={`h-5 w-5 ${isActive ? "text-p4" : "group-hover:text-p4"}`} />
+                  <item.icon className={`${isActive ? "text-p4" : "group-hover:text-p4"} ${isCollapsed ? "h-10 w-10" : "h-5 w-5 "}`} />
                   {!isCollapsed && <span className="font-medium">{item.label}</span>}
                 </div>
               </Link>
