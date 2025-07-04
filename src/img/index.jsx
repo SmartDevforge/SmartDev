@@ -12,6 +12,7 @@ import performanceAuditImg from "./PerformanceAudit.jpg"
 import Ceo from "./Ceo.jpg"
 import profile1 from "./avatar-richard.png"
 import profile2 from "./avatar-shanai.png"
+import hero1 from "./hero1.svg"
 
 export {
     Logo,
@@ -27,5 +28,6 @@ export {
     performanceAuditImg,
     Ceo,
     profile1,
-    profile2
+    profile2,
+    hero1
 }

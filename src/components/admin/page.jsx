@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import { Button } from "../ui/button"
 import StatsCard from "./stats-card"
 import { Badge } from "../ui/badge"
+import { Link } from "react-router-dom"
 
 // Mock data for admin dashboard
 const dashboardStats = [
@@ -124,9 +125,8 @@ export default function AdminDashboardPage() {
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div
-              className={`mb-8 transform transition-all duration-1000 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              }`}
+              className={`mb-8 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
             >
               <div className="flex justify-between >items-center">
                 <div>
@@ -150,9 +150,8 @@ export default function AdminDashboardPage() {
               {dashboardStats.map((stat, index) => (
                 <div
                   key={stat.title}
-                  className={`transform transition-all duration-700 hover:scale-105 ${
-                    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
+                  className={`transform transition-all duration-700 hover:scale-105 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                    }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <StatsCard {...stat} />
@@ -163,9 +162,8 @@ export default function AdminDashboardPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               {/* Recent Projects */}
               <Card
-                className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 ${
-                  isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-                }`}
+                className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+                  }`}
                 style={{ transitionDelay: "400ms" }}
               >
                 <CardHeader>
@@ -210,9 +208,8 @@ export default function AdminDashboardPage() {
 
               {/* Recent Messages */}
               <Card
-                className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 ${
-                  isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
-                }`}
+                className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+                  }`}
                 style={{ transitionDelay: "600ms" }}
               >
                 <CardHeader>
@@ -226,11 +223,10 @@ export default function AdminDashboardPage() {
                     {recentMessages.map((message, index) => (
                       <div
                         key={message.id}
-                        className={`p-4 rounded-lg border transition-all duration-300 hover:scale-102 cursor-pointer ${
-                          message.unread
-                            ? "bg-p4/10 border-p4/30 hover:border-p4/50"
-                            : "bg-black/20 border-p4/20 hover:border-p4/50"
-                        }`}
+                        className={`p-4 rounded-lg border transition-all duration-300 hover:scale-102 cursor-pointer ${message.unread
+                          ? "bg-p4/10 border-p4/30 hover:border-p4/50"
+                          : "bg-black/20 border-p4/20 hover:border-p4/50"
+                          }`}
                       >
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
@@ -245,39 +241,41 @@ export default function AdminDashboardPage() {
                       </div>
                     ))}
                   </div>
-                  <Button variant="outline" className="w-full mt-4 border-p4 text-white hover:bg-p4/20">
-                    View All Messages
-                  </Button>
+                  <Link to="/admin/messages">
+                    <Button variant="outline" className="w-full mt-4 border-p4 text-white hover:bg-p4/20">
+                      View All Messages
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
 
             {/* Quick Actions */}
             <Card
-              className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              }`}
+              className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
               style={{ transitionDelay: "800ms" }}
             >
               <CardHeader>
                 <CardTitle className="text-white">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {[
-                    { label: "Add New Client", icon: Users, color: "bg-p4" },
-                    { label: "Create Project", icon: FolderOpen, color: "bg-p3" },
-                    { label: "Send Newsletter", icon: Mail, color: "bg-p2" },
-                    { label: "View Analytics", icon: TrendingUp, color: "bg-yellow-500" },
+                    { label: "Create Project", icon: FolderOpen, color: "bg-p3", ref: "/admin/project/new" },
+                    { label: "Send Newsletter", icon: Mail, color: "bg-p2", ref: "/admin/newsletter" },
+                    { label: "View Analytics", icon: TrendingUp, color: "bg-yellow-500", ref: "/admin/" },
                   ].map((action, index) => (
-                    <Button
+                    <Link to={action.ref}
                       key={action.label}
-                      className={`${action.color} hover:scale-105 transition-all duration-300 h-20 flex-col space-y-2`}
+                      className={`${action.color} hover:scale-105 transition-all rounded-[10px] duration-300 h-20 flex-col space-y-2`}
                       style={{ transitionDelay: `${index * 100}ms` }}
                     >
-                      <action.icon className="h-6 w-6" />
-                      <span className="text-sm">{action.label}</span>
-                    </Button>
+                      <div className=" flex h-20 items-center gap-1 justify-center">
+                        <action.icon className="h-6 w-6" />
+                        <span className="text-sm">{action.label}</span>
+                      </div>
+                    </Link>
                   ))}
                 </div>
               </CardContent>

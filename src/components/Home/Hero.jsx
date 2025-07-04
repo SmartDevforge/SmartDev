@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Sparkles, Zap } from "lucide-react"
 import { Link } from 'react-router-dom'
 import { Button } from '../ui/button'
-import { heroImg } from '../../img'
+import { hero1, heroImg } from '../../img'
 
 function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -65,16 +65,18 @@ function Hero() {
           >
             <div className="relative">
               <img
-                src={heroImg || "placeholder.svg?height=600&width=600"}
+                src={hero1 || "placeholder.svg?height=600&width=600"}
                 alt="SmartDev Forge Hero"
-                className="rounded-lg shadow-2xl  w-full h-[80dvh] max-md:h-[50dvh]"
+                // className="rounded-lg shadow-2xl  w-full h-[80dvh] max-md:h-[50dvh]"
+                className="rounded-lg  w-full h-[80dvh] max-md:h-[50dvh]"
+
               />
               <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-p3 to-p4 text-p1 p-4 rounded-lg shadow-lg float-animation">
                 <p className="font-bold">100+</p>
                 <p className="text-sm">Projects Delivered</p>
               </div>
               <div
-                className="absolute -top-6 -right-6 bg-gradient-to-r from-p4 to-p5 text-white p-4 rounded-lg shadow-lg float-animation"
+                className="absolute top-3 -right-6 bg-gradient-to-r from-p4 to-p5 text-white p-4 rounded-lg shadow-lg float-animation"
                 style={{ animationDelay: "1s" }}
               >
                 <p className="font-bold">98%</p>

@@ -24,6 +24,8 @@ import AdminMessages from "./pages/admin/AdminMessages"
 import AdminNewsLetter from "./pages/admin/AdminNewsLetter"
 import AdminTestimonials from "./pages/admin/AdminTestimonials"
 import AdminSettings from "./pages/admin/AdminSettings"
+import AddProject from "./components/admin/projects/AddProject"
+import EditProject from "./components/admin/projects/EditProject"
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/clients" element={<AdminClients />} />
           <Route path="/admin/projects" element={<AdminProjects />} />
+          <Route path="/admin/project/new" element={<AddProject />} />
+          <Route path="/admin/project/:id" element={<EditProject />} />
           <Route path="/admin/messages" element={<AdminMessages />} />
           <Route path="/admin/newsletter" element={<AdminNewsLetter />} />
           <Route path="/admin/testimonials" element={<AdminTestimonials />} />

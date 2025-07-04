@@ -5,6 +5,7 @@ import { Button } from "../../ui/button"
 import { Input } from "../../ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card"
 import { Badge } from "../../ui/badge"
+import { Link } from "react-router-dom"
 
 // Mock data for projects
 const projectsData = [
@@ -123,7 +124,6 @@ export default function AdminProjectsPage() {
     <div className="min-h-screen bg-gradient-to-br from-p1 via-p5 to-p4">
       <div className="flex">
         <AdminSidebar />
-
         <main className="flex-1 p-6 ml-64">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
@@ -135,10 +135,12 @@ export default function AdminProjectsPage() {
                   <h1 className="text-3xl font-bold text-white mb-2">Project Management</h1>
                   <p className="text-p2">Track and manage all your projects</p>
                 </div>
-                <Button className="bg-p4 hover:bg-p4/80 text-white">
-                  <Plus className="h-4 w-4 mr-2" />
-                  New Project
-                </Button>
+                <Link to="/admin/project/new">
+                  <Button className="bg-p4 hover:bg-p4/80 text-white">
+                    <Plus className="h-4 w-4 mr-2" />
+                    New Project
+                  </Button>
+                </Link>
               </div>
 
               {/* Search and Filter */}
@@ -181,9 +183,8 @@ export default function AdminProjectsPage() {
               ].map((stat, index) => (
                 <Card
                   key={stat.title}
-                  className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 hover:scale-105 ${
-                    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
+                  className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl transform transition-all duration-700 hover:scale-105 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                    }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <CardContent className="p-6 text-center">
@@ -200,9 +201,8 @@ export default function AdminProjectsPage() {
               {filteredProjects.map((project, index) => (
                 <Card
                   key={project.id}
-                  className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 transform ${
-                    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
+                  className={`bg-black/40 backdrop-blur-sm border-p4/30 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                    }`}
                   style={{ transitionDelay: `${400 + index * 100}ms` }}
                 >
                   <CardHeader className="pb-3">
@@ -212,9 +212,11 @@ export default function AdminProjectsPage() {
                         <Button size="sm" variant="ghost" className="text-p4 hover:bg-p4/20 p-1">
                           <Eye className="h-3 w-3" />
                         </Button>
-                        <Button size="sm" variant="ghost" className="text-p3 hover:bg-p3/20 p-1">
-                          <Edit className="h-3 w-3" />
-                        </Button>
+                        <Link to={`/admin/project/${project.id}`}>
+                          <Button size="sm" variant="ghost" className="text-p3 hover:bg-p3/20 p-1">
+                            <Edit className="h-3 w-3" />
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                     <p className="text-sm text-p2 mb-3">{project.description}</p>
