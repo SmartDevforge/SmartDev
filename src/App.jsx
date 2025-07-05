@@ -29,7 +29,7 @@ import EditProject from "./components/admin/projects/EditProject"
 
 function App() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange={false}>
       <div className="min-h-screen">
         <Routes>
           {/* Admin Routes */}
