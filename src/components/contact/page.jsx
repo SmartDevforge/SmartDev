@@ -33,14 +33,25 @@ export default function ContactPage() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false)
+    // console.log(formData.email)
+   const phone = formData.budget
+   const form = {
+     phone,
+     ...formData
+    }    
+    try {
+      let response = await fetch("https://thompsonsolomonmailserver.onrender.com/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(form),
+      });
       setIsSubmitted(true)
+      console.log(response);
       setFormData({
         name: "",
         email: "",
@@ -48,13 +59,25 @@ export default function ContactPage() {
         project: "",
         message: "",
       })
-
+    } catch (error) {
+      alert(error);
+      setFormData({
+        name: "",
+        email: "",
+        budget: "",
+        project: "",
+        message: "",
+      })
       // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false)
       }, 5000)
-    }, 1500)
+    }
+
   }
+
+
+
 
   return (
     <>

@@ -76,7 +76,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-p3 text-p1 p-4 rounded-lg shadow-lg">
+              <div className="absolute -bottom-6 right-6 bg-p3 text-p1 p-4 rounded-lg shadow-lg">
                 <p className="font-bold">Since 2022</p>
                 <p className="text-sm">Building Digital Excellence</p>
               </div>

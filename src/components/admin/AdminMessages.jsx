@@ -19,73 +19,8 @@ import { Button } from "../../components/ui/button"
 import { Input } from "../../components/ui/input"
 import { Badge } from "../../components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select"
+import { mockMessages } from "../../lib/data"
 
-const mockMessages = [
-  {
-    id: 1,
-    from: "john.doe@techcorp.com",
-    fromName: "John Doe",
-    subject: "Project Update Required",
-    preview: "Hi team, I need an update on the e-commerce project timeline...",
-    content:
-      "Hi team,\n\nI hope this email finds you well. I need an update on the e-commerce project timeline. Could you please provide the current status and expected delivery date?\n\nBest regards,\nJohn Doe",
-    time: "2 hours ago",
-    read: false,
-    starred: true,
-    priority: "high",
-    hasAttachment: true,
-    project: "E-commerce Platform",
-    type: "client",
-  },
-  {
-    id: 2,
-    from: "sarah.wilson@startup.com",
-    fromName: "Sarah Wilson",
-    subject: "New Project Inquiry",
-    preview: "Hello, I would like to discuss a potential mobile app development project...",
-    content:
-      "Hello,\n\nI would like to discuss a potential mobile app development project for our startup. We are looking for a team that can help us build a social networking app.\n\nPlease let me know if you are available for a consultation call.\n\nBest,\nSarah Wilson",
-    time: "5 hours ago",
-    read: true,
-    starred: false,
-    priority: "medium",
-    hasAttachment: false,
-    project: "New Inquiry",
-    type: "prospect",
-  },
-  {
-    id: 3,
-    from: "mike.chen@globaltech.com",
-    fromName: "Mike Chen",
-    subject: "Payment Confirmation",
-    preview: "Thank you for completing the web development project...",
-    content:
-      "Thank you for completing the web development project. The payment has been processed and should reflect in your account within 2-3 business days.\n\nLooking forward to future collaborations.\n\nMike Chen",
-    time: "1 day ago",
-    read: true,
-    starred: false,
-    priority: "low",
-    hasAttachment: true,
-    project: "Corporate Website",
-    type: "client",
-  },
-  {
-    id: 4,
-    from: "team@smartdevforge.com",
-    fromName: "Internal Team",
-    subject: "Weekly Team Meeting",
-    preview: "Reminder: Weekly team standup meeting tomorrow at 10:00 AM...",
-    content:
-      "Reminder: Weekly team standup meeting tomorrow at 10:00 AM in the conference room.\n\nAgenda:\n- Project updates\n- Client feedback review\n- Resource allocation\n\nPlease prepare your updates beforehand.",
-    time: "2 days ago",
-    read: true,
-    starred: true,
-    priority: "medium",
-    hasAttachment: false,
-    project: "Internal",
-    type: "internal",
-  },
-]
 
 const AdminMessage = () => {
   const [messages, setMessages] = useState(mockMessages)

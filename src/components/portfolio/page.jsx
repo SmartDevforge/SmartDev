@@ -79,7 +79,7 @@ export default function PortfolioPage() {
                 className="bg-s1 dark:bg-p5/50 border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img src={project.image || "/placeholder.svg"} alt={project.title} className="object-cover" />
+                  <img src={project.image || "/placeholder.svg"} alt={project.title} className="object-cover w-full" />
                 </div>
                 <CardContent className="p-6 ">
                   <div className="flex flex-wrap gap-2 mb-3">

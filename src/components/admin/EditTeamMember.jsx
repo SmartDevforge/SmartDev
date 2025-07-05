@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/ca
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select"
 import { Badge } from "../../components/ui/badge"
 
-// Mock team member data - in real app, this would come from API
+// Mock team member data
 const mockTeamMember = {
   id: 1,
   firstName: "John",

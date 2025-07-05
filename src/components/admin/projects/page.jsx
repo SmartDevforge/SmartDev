@@ -6,70 +6,9 @@ import { Input } from "../../ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card"
 import { Badge } from "../../ui/badge"
 import { Link } from "react-router-dom"
+import { projectsData } from "../../../lib/data"
 
-// Mock data for projects
-const projectsData = [
-  {
-    id: "SD-2025-001",
-    title: "E-commerce Platform Redesign",
-    client: "TechStart Inc.",
-    clientEmail: "sarah@techstart.com",
-    status: "In Progress",
-    priority: "High",
-    progress: 75,
-    budget: "$45,000",
-    spent: "$33,750",
-    startDate: "2024-12-01",
-    deadline: "2025-02-15",
-    team: ["John Doe", "Jane Smith", "Mike Johnson"],
-    description: "Complete redesign and optimization of the e-commerce platform",
-  },
-  {
-    id: "SD-2025-002",
-    title: "SaaS Dashboard Refactoring",
-    client: "FinEdge Solutions",
-    clientEmail: "michael@finedge.com",
-    status: "Review",
-    priority: "Medium",
-    progress: 90,
-    budget: "$32,000",
-    spent: "$28,800",
-    startDate: "2024-11-15",
-    deadline: "2025-01-30",
-    team: ["Alice Brown", "Bob Wilson"],
-    description: "Code refactoring and performance optimization for SaaS dashboard",
-  },
-  {
-    id: "SD-2025-003",
-    title: "Healthcare Portal Development",
-    client: "HealthTech Solutions",
-    clientEmail: "lisa@healthtech.com",
-    status: "Planning",
-    priority: "High",
-    progress: 25,
-    budget: "$28,000",
-    spent: "$7,000",
-    startDate: "2025-01-01",
-    deadline: "2025-03-10",
-    team: ["Sarah Davis", "Tom Anderson"],
-    description: "HIPAA-compliant patient portal with appointment scheduling",
-  },
-  {
-    id: "SD-2024-015",
-    title: "E-learning Platform",
-    client: "EduPlatform",
-    clientEmail: "david@eduplatform.com",
-    status: "Completed",
-    priority: "Medium",
-    progress: 100,
-    budget: "$15,000",
-    spent: "$15,000",
-    startDate: "2024-08-01",
-    deadline: "2024-11-30",
-    team: ["Emma Wilson", "Chris Lee"],
-    description: "Interactive e-learning platform with progress tracking",
-  },
-]
+
 
 export default function AdminProjectsPage() {
   const [projects, setProjects] = useState(projectsData)

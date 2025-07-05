@@ -5,62 +5,9 @@ import { Button } from "../../ui/button"
 import { Input } from "../../ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card"
 import { Badge } from "../../ui/badge"
+import { clientsData } from "../../../lib/data"
 
-// Mock data for clients
-const clientsData = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    email: "sarah@techstart.com",
-    company: "TechStart Inc.",
-    phone: "+1 (555) 123-4567",
-    status: "Active",
-    totalProjects: 3,
-    totalSpent: "$45,000",
-    joinDate: "2024-01-15",
-    lastContact: "2025-01-10",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    email: "michael@finedge.com",
-    company: "FinEdge Solutions",
-    phone: "+1 (555) 234-5678",
-    status: "Active",
-    totalProjects: 2,
-    totalSpent: "$32,000",
-    joinDate: "2024-03-20",
-    lastContact: "2025-01-08",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 3,
-    name: "Lisa Rodriguez",
-    email: "lisa@healthtech.com",
-    company: "HealthTech Solutions",
-    phone: "+1 (555) 345-6789",
-    status: "Active",
-    totalProjects: 1,
-    totalSpent: "$28,000",
-    joinDate: "2024-06-10",
-    lastContact: "2025-01-05",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: 4,
-    name: "David Thompson",
-    email: "david@eduplatform.com",
-    company: "EduPlatform",
-    phone: "+1 (555) 456-7890",
-    status: "Inactive",
-    totalProjects: 1,
-    totalSpent: "$15,000",
-    joinDate: "2024-02-28",
-    lastContact: "2024-12-15",
-    avatar: "/placeholder.svg?height=40&width=40",
-  },
-]
+
 
 export default function AdminClientsPage() {
   const [clients, setClients] = useState(clientsData)

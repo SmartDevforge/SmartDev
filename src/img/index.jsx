@@ -13,6 +13,8 @@ import Ceo from "./Ceo.jpg"
 import profile1 from "./avatar-richard.png"
 import profile2 from "./avatar-shanai.png"
 import hero1 from "./hero1.svg"
+import pimg1 from "./pimg1.png"
+import pimg2 from "./pimg2.png"
 
 export {
     Logo,
@@ -29,5 +31,7 @@ export {
     Ceo,
     profile1,
     profile2,
-    hero1
+    hero1,
+    pimg1,
+    pimg2
 }

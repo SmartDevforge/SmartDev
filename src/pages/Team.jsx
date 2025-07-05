@@ -5,105 +5,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Twitter, Mail } from "lucide-react"
-import { Ceo, profile1, profile2 } from "../img"
-
-// Mock data for team members
-const teamMembers = [
-    {
-        id: 1,
-        name: "john doe",
-        role: "Team Lead",
-        department: "Leadership",
-        bio: "Visionary leader with 5+ years in web development and digital strategy. Passionate about building scalable solutions.",
-        image: profile1 || "/placeholder.svg?height=300&width=300",
-        skills: ["Strategy", "Leadership", "Full-Stack Development"],
-        social: {
-            github: "https://github.com/johndoe",
-            linkedin: "https://linkedin.com/in/johndoe",
-            twitter: "https://twitter.com/johndoe",
-            email: "john@smartdevforge.com",
-        },
-    },
-
-    {
-        id: 2,
-        name: "sarah  davis",
-        role: "Project Manager",
-        department: "Operations",
-        bio: "Experienced project manager ensuring smooth delivery of projects and excellent client communication.",
-        image:profile1 || "/placeholder.svg?height=300&width=300",
-        skills: ["Project Management", "Agile", "Client Relations", "Strategy"],
-        social: {
-            linkedin: "https://linkedin.com/in/sarahdavis",
-            email: "sarah@smartdevforge.com",
-        },
-    },
-
-    {
-        id: 3,
-        name: "mike Johnson",
-        role: "Senior Developer",
-        department: "Development",
-        bio: "Full-stack developer with expertise in React, Node.js, and cloud architecture. Loves solving complex problems.",
-        image: profile2 || "/placeholder.svg?height=300&width=300",
-        skills: ["React", "Node.js", "AWS", "TypeScript"],
-        social: {
-            github: "https://github.com/mikejohnson",
-            linkedin: "https://linkedin.com/in/mikejohnson",
-            email: "mike@smartdevforge.com",
-        },
-    },
-    {
-        id: 4,
-        name: "Jane Smith",
-        role: "Lead Designer",
-        department: "Design",
-        bio: "Creative designer specializing in UI/UX with a focus on user-centered design and modern aesthetics.",
-        image: profile1 || "/placeholder.svg?height=300&width=300",
-        skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"],
-        social: {
-            linkedin: "https://linkedin.com/in/janesmith",
-            twitter: "https://twitter.com/janesmith",
-            email: "jane@smartdevforge.com",
-        },
-    },
-    {
-        id: 6,
-        name: "Emma Wilson",
-        role: "Frontend Developer",
-        department: "Development",
-        bio: "Frontend specialist with a passion for creating beautiful, performant user interfaces and experiences.",
-        image: profile2 || "/placeholder.svg?height=300&width=300",
-        skills: ["React", "Vue.js", "CSS", "Animation"],
-        social: {
-            github: "https://github.com/emmawilson",
-            linkedin: "https://linkedin.com/in/emmawilson",
-            twitter: "https://twitter.com/emmawilson",
-            email: "emma@smartdevforge.com",
-        },
-    },
-    {
-        id: 5,
-        name: "Tom Anderson",
-        role: "DevOps Engineer",
-        department: "Development",
-        bio: "DevOps specialist focused on automation, CI/CD, and cloud infrastructure optimization.",
-        image: profile1|| "/placeholder.svg?height=300&width=300",
-        skills: ["Docker", "Kubernetes", "AWS", "CI/CD"],
-        social: {
-            github: "https://github.com/tomanderson",
-            linkedin: "https://linkedin.com/in/tomanderson",
-            email: "tom@smartdevforge.com",
-        },
-    },
-  
-]
-
-const departments = ["All", "Leadership", "Design", "Development", "Operations"]
+import { teamMembers } from "../lib/data"
 
 export default function Team() {
     const [selectedDepartment, setSelectedDepartment] = useState("All")
     const [isVisible, setIsVisible] = useState(false)
+    const departments = ["All", "Leadership", "Design", "Development", "Operations"]
 
     useEffect(() => {
         setIsVisible(true)

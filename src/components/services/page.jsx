@@ -5,6 +5,27 @@ import { code, custormWeb, performanceAuditImg, ui, webMentanance } from "../../
 
 // Mock data for services
 const services = [
+
+  {
+    id: "custom-web-apps",
+    icon: <Laptop className="h-12 w-12 text-s3" />,
+    title: "Custom Web Apps",
+    description: "Build tailored web applications that solve your unique business challenges and drive growth.",
+    features: [
+      "Full-stack Development",
+      "API Integration",
+      "Database Design",
+      "Authentication & Security",
+      "Scalable Architecture",
+    ],
+    image: custormWeb || "/placeholder.svg?height=400&width=600",
+    testimonial: {
+      content:
+        "The custom CRM SmartDev Forge built for us has streamlined our operations and increased our team's productivity by 35%.",
+      author: "Jennifer Adams, Operations Manager at ConsultPro",
+    },
+  },
+  
   {
     id: "ui-ux-design",
     icon: <Figma className="h-12 w-12 text-s3" />,
@@ -76,25 +97,7 @@ const services = [
       author: "David Lee, Marketing Director at E-Shop Global",
     },
   },
-  {
-    id: "custom-web-apps",
-    icon: <Laptop className="h-12 w-12 text-s3" />,
-    title: "Custom Web Apps",
-    description: "Build tailored web applications that solve your unique business challenges and drive growth.",
-    features: [
-      "Full-stack Development",
-      "API Integration",
-      "Database Design",
-      "Authentication & Security",
-      "Scalable Architecture",
-    ],
-    image: custormWeb || "/placeholder.svg?height=400&width=600",
-    testimonial: {
-      content:
-        "The custom CRM SmartDev Forge built for us has streamlined our operations and increased our team's productivity by 35%.",
-      author: "Jennifer Adams, Operations Manager at ConsultPro",
-    },
-  },
+
 ]
 
 export default function ServicesPage() {
@@ -155,7 +158,7 @@ export default function ServicesPage() {
                       <img
                         src={service.image || "/placeholder.svg"}
                         alt={service.title}
-                        fill
+                        fill="true"
                         className="object-cover w-full h-full"
                       />
                     </div>
