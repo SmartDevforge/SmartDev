@@ -15,6 +15,10 @@ import profile2 from "./avatar-shanai.png"
 import hero1 from "./hero1.svg"
 import pimg1 from "./pimg1.png"
 import pimg2 from "./pimg2.png"
+import cof from "./cof.jpeg"
+import fe from "./fe.jpg"
+import ay from "./ay.jpeg"
+import dave from "./dave.jpeg"
 
 export {
     Logo,
@@ -33,5 +37,9 @@ export {
     profile2,
     hero1,
     pimg1,
-    pimg2
+    pimg2,
+    cof,
+    fe,
+    ay,
+    dave
 }

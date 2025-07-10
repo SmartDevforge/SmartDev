@@ -1,43 +1,43 @@
 import { BarChart, Code, Figma, Wrench } from "lucide-react"
-import { Ceo, Features1, Features2, Features3, pimg1, pimg2, profile1, profile2, ui } from "../img"
+import { ay, Ceo, cof, dave, fe, Features1, Features2, Features3, pimg1, pimg2, profile1, profile2, ui } from "../img"
 
 // Mock data for case studies
 export const caseStudies = [
-    {
-      id: 1,
-      title: "E-commerce Platform Redesign",
-      description: "Increased conversion rate by 45% through UX improvements and performance optimization",
-      image:Features1,
-      tags: ["UI/UX", "React", "Next.js"],
-    },
-    {
-      id: 2,
-      title: "SaaS Dashboard Refactoring",
-      description: "Reduced bundle size by 60% and improved load time by 2.5 seconds",
-      image: Features2,
-      tags: ["Code Refactoring", "Performance", "React"],
-    },
-    {
-      id: 3,
-      title: "Fintech Mobile App",
-      description: "Built a responsive web app with 99% uptime and seamless payment integration",
-      image:Features3,
-      tags: ["Custom Web App", "Paystack", "Firebase"],
-    },
-  ]
+  {
+    id: 1,
+    title: "E-commerce Platform Redesign",
+    description: "Increased conversion rate by 45% through UX improvements and performance optimization",
+    image: Features1,
+    tags: ["UI/UX", "React", "Next.js"],
+  },
+  {
+    id: 2,
+    title: "SaaS Dashboard Refactoring",
+    description: "Reduced bundle size by 60% and improved load time by 2.5 seconds",
+    image: Features2,
+    tags: ["Code Refactoring", "Performance", "React"],
+  },
+  {
+    id: 3,
+    title: "Fintech Mobile App",
+    description: "Built a responsive web app with 99% uptime and seamless payment integration",
+    image: Features3,
+    tags: ["Custom Web App", "Paystack", "Firebase"],
+  },
+]
 
-  
-  // Tech stack logos
- export const techStack = [
-    { name: "React", logo: "/placeholder.svg?height=60&width=60" },
-    { name: "Next.js", logo: "/placeholder.svg?height=60&width=60" },
-    { name: "Firebase", logo: "/placeholder.svg?height=60&width=60" },
-    { name: "Tailwind CSS", logo: "/placeholder.svg?height=60&width=60" },
-    { name: "Paystack", logo: "/placeholder.svg?height=60&width=60" },
-    { name: "Node.js", logo: "/placeholder.svg?height=60&width=60" },
-  ]
 
-  // Mock data for testimonials
+// Tech stack logos
+export const techStack = [
+  { name: "React", logo: "/placeholder.svg?height=60&width=60" },
+  { name: "Next.js", logo: "/placeholder.svg?height=60&width=60" },
+  { name: "Firebase", logo: "/placeholder.svg?height=60&width=60" },
+  { name: "Tailwind CSS", logo: "/placeholder.svg?height=60&width=60" },
+  { name: "Paystack", logo: "/placeholder.svg?height=60&width=60" },
+  { name: "Node.js", logo: "/placeholder.svg?height=60&width=60" },
+]
+
+// Mock data for testimonials
 export const testimonials = [
   {
     id: 1,
@@ -59,7 +59,7 @@ export const testimonials = [
     content:
       "The team at SmartDev Forge delivered our project ahead of schedule and exceeded our performance expectations. The code refactoring work reduced our bundle size by 60% and improved load times significantly.",
     rating: 5,
-    avatar: profile1 ||"/placeholder.svg?height=80&width=80",
+    avatar: profile1 || "/placeholder.svg?height=80&width=80",
   },
   {
     id: 3,
@@ -70,7 +70,7 @@ export const testimonials = [
     content:
       "Working with SmartDev Forge was a game-changer for our healthcare portal. They understood our complex requirements and delivered a HIPAA-compliant solution that our patients love.",
     rating: 5,
-    avatar:profile2|| "/placeholder.svg?height=80&width=80",
+    avatar: profile2 || "/placeholder.svg?height=80&width=80",
   },
   {
     id: 4,
@@ -81,7 +81,7 @@ export const testimonials = [
     content:
       "The e-learning platform SmartDev Forge built for us has transformed our online education offerings. Student engagement and completion rates have exceeded our expectations.",
     rating: 5,
-    avatar:profile1 || "/placeholder.svg?height=80&width=80",
+    avatar: profile1 || "/placeholder.svg?height=80&width=80",
   },
   {
     id: 5,
@@ -92,7 +92,7 @@ export const testimonials = [
     content:
       "The custom CRM SmartDev Forge built for us has streamlined our operations and increased our team's productivity by 35%. The system is intuitive and exactly what we needed.",
     rating: 5,
-    avatar: profile2|| "/placeholder.svg?height=80&width=80",
+    avatar: profile2 || "/placeholder.svg?height=80&width=80",
   },
   {
     id: 6,
@@ -103,10 +103,10 @@ export const testimonials = [
     content:
       "After implementing SmartDev Forge's performance recommendations, our page load time decreased by 65% and conversions increased by 23%. The ROI was immediate and substantial.",
     rating: 5,
-    avatar: profile1|| "/placeholder.svg?height=80&width=80",
+    avatar: profile1 || "/placeholder.svg?height=80&width=80",
   },
 ]
-  // Mock data for projects
+// Mock data for projects
 export const projects = [
   {
     id: 1,
@@ -168,7 +168,7 @@ export const projects = [
     id: 3,
     title: "Fintech Mobile App",
     description: "Custom web application for financial transactions and account management",
-    image: pimg2 ||"/placeholder.svg?height=400&width=600",
+    image: pimg2 || "/placeholder.svg?height=400&width=600",
 
     tags: ["Custom Web App", "React Native", "Firebase", "Paystack"],
     category: "web-app",
@@ -253,7 +253,7 @@ export const projects = [
     id: 6,
     title: "E-learning Platform",
     description: "Interactive learning management system with progress tracking",
-    image:Features3,
+    image: Features3,
     tags: ["Web App", "React", "Firebase", "Node.js"],
     category: "web-app",
     caseStudy: {
@@ -473,92 +473,81 @@ export const mockMessages = [
 
 // Mock data for team members
 export const teamMembers = [
-    {
-        id: 1,
-        name: "john doe",
-        role: "Team Lead",
-        department: "Leadership",
-        bio: "Visionary leader with 5+ years in web development and digital strategy. Passionate about building scalable solutions.",
-        image: profile1 || "/placeholder.svg?height=300&width=300",
-        skills: ["Strategy", "Leadership", "Full-Stack Development"],
-        social: {
-            github: "https://github.com/johndoe",
-            linkedin: "https://linkedin.com/in/johndoe",
-            twitter: "https://twitter.com/johndoe",
-            email: "john@smartdevforge.com",
-        },
+  {
+    id: 1,
+    name: "Thompson Solomon",
+    role: "Team Lead",
+    department: "Leadership",
+    bio: "Visionary leader with 4+ years in web development and digital strategy. Passionate about building scalable solutions.",
+    image: Ceo || "/placeholder.svg?height=300&width=300",
+    skills: ["Strategy", "Leadership", "Full-Stack Development"],
+    social: {
+      github: "https://github.com/thompsonsolomon",
+      linkedin: "https://www.linkedin.com/in/thompson-solomon-87283a232",
+      twitter: "https://x.com/ThompsonSo86878?t=QOMRONfO3vsEu5X17NRV8w&s=09",
+      email: "thompsonsolomon123@gmail.com",
     },
+  },
 
-    {
-        id: 2,
-        name: "sarah  davis",
-        role: "Project Manager",
-        department: "Operations",
-        bio: "Experienced project manager ensuring smooth delivery of projects and excellent client communication.",
-        image:profile1 || "/placeholder.svg?height=300&width=300",
-        skills: ["Project Management", "Agile", "Client Relations", "Strategy"],
-        social: {
-            linkedin: "https://linkedin.com/in/sarahdavis",
-            email: "sarah@smartdevforge.com",
-        },
+  {
+    id: 2,
+    name: "Maxwell Joshua",
+    role: "Project Manager",
+    department: "Operations",
+    bio: "Experienced project manager ensuring smooth delivery of projects and excellent client communication.",
+    image: cof || "/placeholder.svg?height=300&width=300",
+    skills: ["Project Management", "Agile", "Client Relations", "Strategy"],
+    social: {
+      github: "https://github.com/amazingjomax/",
+      linkedin: "https://www.linkedin.com/in/maxwell-joshua-448a71247",
+      email: "joshuaademax@gmail.com",
+      twitter: "https://twitter.com/MaxwellJoshua17",
     },
+  },
 
-    {
-        id: 3,
-        name: "mike Johnson",
-        role: "Senior Developer",
-        department: "Development",
-        bio: "Full-stack developer with expertise in React, Node.js, and cloud architecture. Loves solving complex problems.",
-        image: profile2 || "/placeholder.svg?height=300&width=300",
-        skills: ["React", "Node.js", "AWS", "TypeScript"],
-        social: {
-            github: "https://github.com/mikejohnson",
-            linkedin: "https://linkedin.com/in/mikejohnson",
-            email: "mike@smartdevforge.com",
-        },
+  {
+    id: 3,
+    name: "David Ojetola",
+    role: "Backend Developer",
+    department: "Development",
+    bio: "Full-stack developer with expertise in React, Node.js, and cloud architecture. Loves solving complex problems.",
+    image: dave || "/placeholder.svg?height=300&width=300",
+    skills: ["React", "Node.js", "AWS", "TypeScript"],
+    social: {
+      github: "https://github.com/David-Horjet",
+      linkedin: "https://www.linkedin.com/in/david-ojetola-a598b2232",
+      email: "davidhorjet@gmail.com",
+      twitter: "https://twitter.com/david_ojetola",
     },
-    {
-        id: 4,
-        name: "Jane Smith",
-        role: "Lead Designer",
-        department: "Design",
-        bio: "Creative designer specializing in UI/UX with a focus on user-centered design and modern aesthetics.",
-        image: profile1 || "/placeholder.svg?height=300&width=300",
-        skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"],
-        social: {
-            linkedin: "https://linkedin.com/in/janesmith",
-            twitter: "https://twitter.com/janesmith",
-            email: "jane@smartdevforge.com",
-        },
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    role: "Lead Designer",
+    department: "Design",
+    bio: "Creative designer specializing in UI/UX with a focus on user-centered design and modern aesthetics.",
+    image: ay || "/placeholder.svg?height=300&width=300",
+    skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"],
+    social: {
+      linkedin: "https://linkedin.com/in/janesmith",
+      twitter: "https://twitter.com/janesmith",
+      email: "jane@smartdevforge.com",
     },
-    {
-        id: 6,
-        name: "Emma Wilson",
-        role: "Frontend Developer",
-        department: "Development",
-        bio: "Frontend specialist with a passion for creating beautiful, performant user interfaces and experiences.",
-        image: profile2 || "/placeholder.svg?height=300&width=300",
-        skills: ["React", "Vue.js", "CSS", "Animation"],
-        social: {
-            github: "https://github.com/emmawilson",
-            linkedin: "https://linkedin.com/in/emmawilson",
-            twitter: "https://twitter.com/emmawilson",
-            email: "emma@smartdevforge.com",
-        },
+  },
+  {
+    id: 6,
+    name: "Micheal Akintelure",
+    role: "Frontend Developer",
+    department: "Development",
+    bio: "Frontend specialist with a passion for creating beautiful, performant user interfaces and experiences.",
+    image: fe || "/placeholder.svg?height=300&width=300",
+    skills: ["React", "Vue.js", "CSS", "Animation"],
+    social: {
+      github: "https://github.com/emmawilson",
+      linkedin: "https://linkedin.com/in/emmawilson",
+      twitter: "https://twitter.com/emmawilson",
+      email: "emma@smartdevforge.com",
     },
-    {
-        id: 5,
-        name: "Tom Anderson",
-        role: "DevOps Engineer",
-        department: "Development",
-        bio: "DevOps specialist focused on automation, CI/CD, and cloud infrastructure optimization.",
-        image: profile1|| "/placeholder.svg?height=300&width=300",
-        skills: ["Docker", "Kubernetes", "AWS", "CI/CD"],
-        social: {
-            github: "https://github.com/tomanderson",
-            linkedin: "https://linkedin.com/in/tomanderson",
-            email: "tom@smartdevforge.com",
-        },
-    },
-  
+  },
+
 ]
