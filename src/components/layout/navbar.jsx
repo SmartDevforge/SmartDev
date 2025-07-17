@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { Menu, X, Moon, Sun } from "lucide-react"
 import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
@@ -45,13 +45,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <NavLink to="/" className="flex-shrink-0 group">
+            <Link to="/" className="flex-shrink-0 group">
               <span className="text-2xl font-bold text-white group-hover:scale-105 transition-transform duration-300">
                 SmartDev<span className="text-p4 ">Forge</span>
               </span>
 
               {/* <h1 class="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-extrabold text-transparent bg-clip-text cursor-pointer bg-gradient-to-r from-p4 to-p5 hover:from-p4 hover:to-p5 transform hover:scale-105 transition-all duration-300 ease-in-out">SmartDev Forge</h1> */}
-            </NavLink>
+            </Link>
           </div>
 
           <div className="hidden lg:block">
