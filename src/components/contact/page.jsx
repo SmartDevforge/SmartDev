@@ -166,7 +166,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label htmlFor="project" className="block text-sm font-medium text-p1 dark:text-white mb-2">
-                        Project Type
+                        Project Name
                       </label>
                       <Input
                         id="project"
