@@ -43,7 +43,7 @@ export default function ContactPage() {
      ...formData
     }    
     try {
-      let response = await fetch("https://thompsonsolomonmailserver.onrender.com/contact", {
+      let response = await fetch("https://smartdevserver.onrender.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
